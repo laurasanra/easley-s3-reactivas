@@ -3,7 +3,7 @@
 
 // PALLETES INPUTS
 //Refactor: each input radio check at the palette selector
-
+//BEA
 const inputBlue = document.getElementById("pallete-blue");
 const inputRed = document.getElementById("pallete-red");
 const inputGrey = document.getElementById("pallete-grey");
@@ -169,7 +169,9 @@ function initDataCard() {
 } //refactor: to go along with its handlerFunction
 resetBtn.addEventListener("click", initDataCard);
 
+//END OF BEA
 
+//EMMA
 
 function updateDataName(event) {
   const value = inputName.value;
@@ -296,7 +298,9 @@ inputRed.addEventListener("click", handleColorTheme);
 inputGrey.addEventListener("click", handleColorTheme);
 inputGum.addEventListener("click", handleColorTheme);
 inputPurple.addEventListener("click", handleColorTheme);
+//END OF EMMA
 
+//START OF INMA
 //LINKING FONT FAMILY TO USER CARD
 
 const ubuntuFont = document.getElementById("font-ubuntu");
@@ -495,9 +499,9 @@ function inputs() {
 }
 
 inputs();
-
+//END OF INMA, PLEASE CODE ABOVE SHOULD BE REFACTORED WITH ANOTHER PERSON
 /// fetch API
-
+//LAURA
 const btnShare = document.querySelector(".btn-share");
 const cardCreated = document.querySelector(".card-created");
 //const linkURL = document.querySelector(".link"); //revisar
@@ -593,3 +597,4 @@ function resetSkills() {
 }
 
 resetBtn.addEventListener('click', resetSkills);
+//END OF LAURA
