@@ -308,7 +308,7 @@ const comicFont = document.getElementById("font-comic");
 const montseFont = document.getElementById("font-montse");
 const fontCard = document.querySelector(".card-header");
 
-function handleFonttheme() {
+function handleFonttheme(event) {
   fontCard.classList.remove("font-ubuntu", "font-comic", "font-montse");
 
   const fontSelectedByUser = event.currentTarget;
