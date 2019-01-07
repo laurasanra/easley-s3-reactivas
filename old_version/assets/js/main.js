@@ -117,7 +117,7 @@ function fillSavedForm() {
   inputPurple.checked = false;
 
   //REFACTOR: pending to abilitate default checked palette
-  if (dataCard.pallete === '1' || dataCard.pallete === ""){
+  if (dataCard.pallete === '1' || dataCard.pallete === "") {
     inputBlue.checked = true;
     userCard.classList.add('color-blue');
   }
@@ -369,7 +369,7 @@ function handlerLinkedin() {
 
 //add Image Feature
 //button div contacto, con div add_image.
-//TODO:   ask about FileReader
+
 const fr = new FileReader();
 
 function getImage(event) {
@@ -389,7 +389,7 @@ function writeImage(event) {
   previewImg.setAttribute("src", event.target.result);
 }
 
-function fileClick() {
+function fileClick(event) {
   event.preventDefault();
   inputImage.click();
 }
@@ -400,6 +400,17 @@ linked.addEventListener('keyup', handlerLinkedin);
 let skillArray = [];
 let j = 0;
 let acc = 0;
+
+function gettingSkills() {
+  if (dataCard.skills) {
+    skillArray = dataCard.skills;
+    j = skillArray.length;
+    acc = skillArray.length;
+  }
+  else {
+    skillArray = [];
+  }
+}
 
 
 function inputs() {
@@ -412,6 +423,7 @@ function inputs() {
       const dskills = data.skills;
       let divContent = "";
       let i = 1;
+
       for (const skill of dskills) {
         const skillContent = `<div class="check_styles"><label for="${[
           i
@@ -421,26 +433,18 @@ function inputs() {
         divContent += skillContent;
         i = i + 1;
       }
+
       divskills.innerHTML = divContent;
+
+      gettingSkills();
 
       const checkInput = document.querySelectorAll('.checkbox_input');
       saveDataskills(checkInput);
-      if(dataCard.skills){
-        skillArray = dataCard.skills;
-        console.log('si ya lo tengo va a ser el de la card',skillArray);
-        j = skillArray.length;
-        console.log('la lenght es', j);
-        acc = skillArray.length;
-      }
-      else{
-        skillArray = [];
-      }
-      const ulBlue = document.querySelector('.skills__list');
 
       function check(event) {
 
         for (let i = 0; i < checkInput.length; i++) {
-          if (acc <= 3 && j<=3) {
+          if (acc <= 3 && j <= 3) {
             for (let k = 0; k < checkInput.length; k++) {
               if (checkInput[k].checked === false)
                 checkInput[k].disabled = false;
@@ -492,6 +496,7 @@ function inputs() {
         updateDataCard('skills', skillArray);
         localStorage.setItem('data', JSON.stringify(dataCard));
       }
+
       for (let i = 0; i < checkInput.length; i++) {
         checkInput[i].addEventListener("click", check);
       }
@@ -499,7 +504,7 @@ function inputs() {
 }
 
 inputs();
-//END OF INMA, PLEASE CODE ABOVE SHOULD BE REFACTORED WITH ANOTHER PERSON
+//END OF INMA
 /// fetch API
 //LAURA
 const btnShare = document.querySelector(".btn-share");
