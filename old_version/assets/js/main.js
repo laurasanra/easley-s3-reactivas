@@ -3,7 +3,7 @@
 
 // PALLETES INPUTS
 //Refactor: each input radio check at the palette selector
-//BEA
+
 const inputBlue = document.getElementById("pallete-blue");
 const inputRed = document.getElementById("pallete-red");
 const inputGrey = document.getElementById("pallete-grey");
@@ -37,7 +37,8 @@ const resetBtn = document.querySelector(".reset-btn"); //card reset btn
 //variables photo
 const uploadBtn = document.querySelector(".button_ad_image");//btn "anadir imagen"
 const inputImage = document.getElementById("img-selector"); //input type file to catch image, its hidden
-const boxUserImage = document.querySelector(".card-img"); //main image
+const boxUserImage = document.querySelector(".card-img");
+const boxUserImageSmall = document.querySelector(".preview-box");  //main image
 const previewImg = document.querySelector(".preview-img"); //small preview box
 
 //Refactor
@@ -61,9 +62,14 @@ let dataCard = {
   error: ""
 };
 
-// cheking if exist data on localStorage
-//Refactor: retrieve from LS data and assign it to let variable
+// cheking if exist data on localStorage /Refactor: retrieve from LS data and assign it to let variable
 let savedData = localStorage.getItem("data");
+
+// default checkout for palettes
+if (!savedData){
+  inputBlue.checked = true;
+  userCard.classList.add('color-blue');
+}
 //Refactor: if we have LS, parse it and fill Form
 if (savedData) {
   // to fill datacard
@@ -71,43 +77,40 @@ if (savedData) {
   fillSavedForm();
 }
 
-// fill form with data on localStorage
-//refactor: modify this loooong function to separate ones and invoke them as callbacks into a wider one. For  ifs, use ternary operators
-function fillSavedForm() {
-  //refactor: create function for fill name and job
-  if (dataCard.name) {
-    name.innerHTML = dataCard.name;
-  } else {
-    name.innerHTML = "Nombre Apellido";
-  }
-  inputName.value = dataCard.name;
-  //job
-  if (dataCard.job) {
-    job.innerHTML = dataCard.job;
-  } else {
-    job.innerHTML = "Front-end developer";
-  }
-  inputJob.value = dataCard.job;
+//functions to refactoring
 
-  //-----second function
-  //icons
-  //third and fourth functions: one for icons href (include Linkedin icons[2].href ), and another one for phone, mail and github value
+function fillName(){
+  dataCard.name? name.innerHTML = dataCard.name: name.innerHTML = "Nombre Apellido";
+  inputName.value = dataCard.name;
+}
+
+function fillJob(){
+  dataCard.job?job.innerHTML = dataCard.job:job.innerHTML = "Front-end developer";
+  inputJob.value = dataCard.job;
+}
+
+function fillIcons(){
   icons[0].href = "tel: +34" + dataCard.phone;
   phone.value = dataCard.phone;
 
   icons[1].href = "mailto:" + dataCard.email;
   mail.value = dataCard.email;
 
+  icons[2].href = "https://linkedin.com/" + dataCard.linkedin;
+  mail.value = dataCard.linkedin;
+
   icons[3].href = "https://github.com/" + dataCard.github;
-  github.value = dataCard.github;
-  // photo
-  //refactor: fifth function. Plus amend small preview image at reload
+  linkedin.value = dataCard.github;
+}
+
+function fillPhoto(){
   if (dataCard.photo) {
     boxUserImage.style.backgroundImage = "url(" + dataCard.photo + ")";
+    boxUserImageSmall.style.backgroundImage = "url(" + dataCard.photo + ")";
   }
+}
 
-  //pallete
-  //Refactor: sixth function -- reset palette and set up background and palette design color as per checked radio btn
+function resetPallete(){
   userCard.classList.remove('color-grey', 'color-red', 'color-gum', 'color-purple');
   bgColor.classList.remove('animation-red', 'animation-grey', 'animation-gum', 'animation-purple');
   inputBlue.checked = false;
@@ -115,33 +118,32 @@ function fillSavedForm() {
   inputGrey.checked = false;
   inputGum.checked = false;
   inputPurple.checked = false;
+}
 
   //REFACTOR: pending to abilitate default checked palette
-  if (dataCard.pallete === '1' || dataCard.pallete === ""){
+  if (dataCard.pallete === '1' || dataCard.pallete === "") {
     inputBlue.checked = true;
     userCard.classList.add('color-blue');
   }
-  if (dataCard.pallete === "2") {
-    inputRed.checked = true;
-    userCard.classList.add('color-red');
-    bgColor.classList.add('animation-red');
 
-  }
-  if (dataCard.pallete === "3") {
-    inputGrey.checked = true;
-    userCard.classList.add('color-grey');
-    bgColor.classList.add('animation-grey');
-  }
-  if (dataCard.pallete === "4") {
-    inputGum.checked = true;
-    userCard.classList.add('color-gum');
-    bgColor.classList.add('animation-gum');
-  }
-  if (dataCard.pallete === "5") {
-    inputPurple.checked = true;
-    userCard.classList.add('color-purple');
-    bgColor.classList.add('animation-purple');
-  }
+
+function fillPalettes(){
+  ifCheckedPallete ('',inputBlue,'blue');
+  ifCheckedPallete ('1',inputBlue,'blue');
+  ifCheckedPallete ('2',inputRed,'red');
+  ifCheckedPallete ('3',inputRed,'grey');
+  ifCheckedPallete ('4',inputGum,'gum');
+  ifCheckedPallete ('5',inputPurple,'purple');
+}
+
+// fill form with data on localStorage/Refactor: create function for fill name and job
+function fillSavedForm() {
+  fillName();
+  fillJob();
+  fillIcons();
+  fillPhoto();
+  resetPallete();
+  fillPalettes();
 }
 
 // reset dataCard
@@ -169,42 +171,23 @@ function initDataCard() {
 } //refactor: to go along with its handlerFunction
 resetBtn.addEventListener("click", initDataCard);
 
-//END OF BEA
 
-//EMMA
-
+//emma: refactor event updating on name and job fields and set items to LS
 function updateDataName(event) {
   const value = inputName.value;
-  if (value) {
-    name.innerHTML = event.target.value;
-  } else {
-    name.innerHTML = "Nombre Apellido";
-  }
-  updateDataCard("name", inputName.value);
-  localStorage.setItem("data", JSON.stringify(dataCard));
+  value ? name.innerHTML = event.target.value : name.innerHTML = "Nombre Apellido";
+  updateDataCard("name", value);
 }
 
 function updateDataCard(key, value) {
-  console.log(key);
-  console.log(value);
   dataCard[key] = value;
   localStorage.setItem("data", JSON.stringify(dataCard));
 }
 
-//  function retrieveDataStored() {
-//      const dataStored = JSON.parse('data')
-//      console.log(dataStored);
-//  }
-
 function updateDataJob(event) {
   const value = inputJob.value;
-  if (value) {
-    job.innerHTML = event.target.value;
-  } else {
-    job.innerHTML = "Front-end developer";
-  }
+  value ? job.innerHTML = event.target.value :job.innerHTML = "Front-end developer";
   updateDataCard("job", inputJob.value);
-  localStorage.setItem("data", JSON.stringify(dataCard));
 }
 
 inputName.addEventListener("keyup", updateDataName);
@@ -216,6 +199,7 @@ const hideBoxes = document.querySelectorAll(".bring-box");
 const butonUnfold = document.querySelectorAll(".btn-unfold");
 const butonfold = document.querySelectorAll(".btn-fold");
 const button = document.querySelectorAll("button");
+//TODO: ask help to the rest of the group about how refactor this if inside an if
 
 function fold(event) {
   const newButton = event.currentTarget;
@@ -241,13 +225,22 @@ function fold(event) {
   }
 }
 
-butonUnfold[0].addEventListener("click", fold);
-butonUnfold[1].addEventListener("click", fold);
-butonUnfold[2].addEventListener("click", fold);
 
-butonfold[0].addEventListener("click", fold);
-butonfold[1].addEventListener("click", fold);
-butonfold[2].addEventListener("click", fold);
+//add event listeners to button fold and unfold instead of repeating it
+
+function addFoldListeners(){
+  for(const btnFold of butonfold){
+    btnFold.addEventListener('click', fold);
+  }
+}
+
+function addUnFoldListeners(){
+  for(const btnUnFold of butonUnfold){
+    btnUnFold.addEventListener('click', fold);
+  }
+}
+addFoldListeners();
+addUnFoldListeners();
 
 //pallete
 const handleColorTheme = () => {
@@ -298,9 +291,8 @@ inputRed.addEventListener("click", handleColorTheme);
 inputGrey.addEventListener("click", handleColorTheme);
 inputGum.addEventListener("click", handleColorTheme);
 inputPurple.addEventListener("click", handleColorTheme);
-//END OF EMMA
 
-//START OF INMA
+//end of emma
 //LINKING FONT FAMILY TO USER CARD
 
 const ubuntuFont = document.getElementById("font-ubuntu");
@@ -308,7 +300,7 @@ const comicFont = document.getElementById("font-comic");
 const montseFont = document.getElementById("font-montse");
 const fontCard = document.querySelector(".card-header");
 
-function handleFonttheme() {
+function handleFonttheme(event) {
   fontCard.classList.remove("font-ubuntu", "font-comic", "font-montse");
 
   const fontSelectedByUser = event.currentTarget;
@@ -369,7 +361,7 @@ function handlerLinkedin() {
 
 //add Image Feature
 //button div contacto, con div add_image.
-//TODO:   ask about FileReader
+
 const fr = new FileReader();
 
 function getImage(event) {
@@ -401,6 +393,16 @@ let skillArray = [];
 let j = 0;
 let acc = 0;
 
+function gettingSkills() {
+  dataCard.skills ?
+    (skillArray = dataCard.skills,
+    j = skillArray.length,
+    acc = skillArray.length
+    ) :
+    skillArray = [];
+  
+}
+
 
 function inputs() {
   fetch(
@@ -412,6 +414,7 @@ function inputs() {
       const dskills = data.skills;
       let divContent = "";
       let i = 1;
+
       for (const skill of dskills) {
         const skillContent = `<div class="check_styles"><label for="${[
           i
@@ -421,26 +424,18 @@ function inputs() {
         divContent += skillContent;
         i = i + 1;
       }
+
       divskills.innerHTML = divContent;
+
+      gettingSkills();
 
       const checkInput = document.querySelectorAll('.checkbox_input');
       saveDataskills(checkInput);
-      if(dataCard.skills){
-        skillArray = dataCard.skills;
-        console.log('si ya lo tengo va a ser el de la card',skillArray);
-        j = skillArray.length;
-        console.log('la lenght es', j);
-        acc = skillArray.length;
-      }
-      else{
-        skillArray = [];
-      }
-      const ulBlue = document.querySelector('.skills__list');
 
       function check(event) {
 
         for (let i = 0; i < checkInput.length; i++) {
-          if (acc <= 3 && j<=3) {
+          if (acc <= 3 && j <= 3) {
             for (let k = 0; k < checkInput.length; k++) {
               if (checkInput[k].checked === false)
                 checkInput[k].disabled = false;
@@ -492,6 +487,7 @@ function inputs() {
         updateDataCard('skills', skillArray);
         localStorage.setItem('data', JSON.stringify(dataCard));
       }
+
       for (let i = 0; i < checkInput.length; i++) {
         checkInput[i].addEventListener("click", check);
       }
@@ -499,13 +495,11 @@ function inputs() {
 }
 
 inputs();
-//END OF INMA, PLEASE CODE ABOVE SHOULD BE REFACTORED WITH ANOTHER PERSON
+
 /// fetch API
-//LAURA
+
 const btnShare = document.querySelector(".btn-share");
 const cardCreated = document.querySelector(".card-created");
-//const linkURL = document.querySelector(".link"); //revisar
-
 
 function sendRequest(dataCard) {
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
@@ -515,17 +509,12 @@ function sendRequest(dataCard) {
       'content-type': 'application/json'
     },
   })
-    .then(function (resp) {
-      return resp.json();
-
-    })
-    .then(function (resultURL) {
+    .then(resp => resp.json())
+    .then(resultURL => {
       showURL(resultURL);
       btnShare.classList.remove("btn-share--disabled");
     })
-    .catch(function (error) {
-      console.log(error);
-    });
+    .catch(error => console.log(error))
 }
 
 function sendData() {
@@ -535,29 +524,20 @@ function sendData() {
 }
 
 const twitterShare = document.querySelector('.twitter-link');
+
 function showURL(resultURL) {
   const linkURLShare = document.querySelector('.share-link');
+  linkURLShare.innerHTML = (resultURL.success) ? "<a class='link' href=" + resultURL.cardURL + " >" + resultURL.cardURL + "</a>" : "ERROR:" + dataCard.error;
 
-  if (resultURL.success) {
-    console.log(resultURL.success);
-    linkURLShare.innerHTML =
-      "<a class='link' href=" + resultURL.cardURL + " >" + resultURL.cardURL + "</a>";
-    console.log(dataCard.cardURL);
-    //mete el enlace a twiter en el html pero hayq arreglarlo
-    twitterShare.href = "https://twitter.com/intent/tweet?text=Mi%20tarjeta%20virtual%20&url=" + resultURL.cardURL;
-  } else {
-    linkURLShare.innerHTML = "ERROR:" + dataCard.error;
-  }
 }
 
 btnShare.addEventListener("click", sendData);
-//btnShare.addEventListener("load", sendData);
+
 function saveDataskills(a) {
-  // cheking if exist data on localStorage//
   let savedData = localStorage.getItem('data');
   if (savedData) {
     let savedDataCard = JSON.parse(savedData);
-    // to fill datacard
+
     if (savedDataCard) {
       dataCard = savedDataCard;
       let liC3 = '';
@@ -579,7 +559,6 @@ function saveDataskills(a) {
         }
 
       }
-      const ulBlue = document.querySelector('.skills__list');
       ulBlue.innerHTML = liC3;
     }
   }
@@ -597,4 +576,3 @@ function resetSkills() {
 }
 
 resetBtn.addEventListener('click', resetSkills);
-//END OF LAURA
