@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import CardGenerator from './CardGenerator';
 
-
-<CardGenerator />
-
-
+class App extends Component {
+    render(){
+        return <CardGenerator />
+    }
+}
 
 export default App;
