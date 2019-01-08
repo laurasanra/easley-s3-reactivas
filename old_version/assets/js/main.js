@@ -25,7 +25,7 @@ const mail = document.querySelector("#email");
 const icons = document.querySelectorAll(".icons-card");
 const phone = document.querySelector("#phone");
 const github = document.querySelector("#github");
-const linked = document.querySelector("#linkedin");
+const linkedin = document.querySelector("#linkedin");
 
 //variablesname-job
 const name = document.querySelector(".name-person"); //card name
@@ -120,11 +120,13 @@ function resetPallete(){
   inputPurple.checked = false;
 }
 
-  //REFACTOR: pending to abilitate default checked palette
-  if (dataCard.pallete === '1' || dataCard.pallete === "") {
-    inputBlue.checked = true;
-    userCard.classList.add('color-blue');
+function ifCheckedPallete (number,inputColor, color){
+  if (dataCard.pallete === number){
+    inputColor.checked = true;
+    userCard.classList.add(`color-${color}`)
+    bgColor.classList.add(`animation-${color}`);
   }
+ }
 
 
 function fillPalettes(){
@@ -243,7 +245,7 @@ addFoldListeners();
 addUnFoldListeners();
 
 //pallete
-const handleColorTheme = () => {
+const handleColorTheme = (event) => {
   userCard.classList.remove(
     "color-grey",
     "color-red",
@@ -354,8 +356,8 @@ github.addEventListener("keyup", handlerGithub);
 //form linkedin
 
 function handlerLinkedin() {
-  icons[2].href = "https://linkedin.com/in/" + linked.value;
-  updateDataCard("linkedin", linked.value);
+  icons[2].href = "https://linkedin.com/in/" + linkedin.value;
+  updateDataCard("linkedin", linkedin.value);
   localStorage.setItem("data", JSON.stringify(dataCard));
 }
 
@@ -381,26 +383,25 @@ function writeImage(event) {
   previewImg.setAttribute("src", event.target.result);
 }
 
-function fileClick() {
+function fileClick(event) {
   event.preventDefault();
   inputImage.click();
 }
 
 inputImage.addEventListener('change', getImage);
 uploadBtn.addEventListener('click', fileClick);
-linked.addEventListener('keyup', handlerLinkedin);
+linkedin.addEventListener('keyup', handlerLinkedin);
 let skillArray = [];
 let j = 0;
 let acc = 0;
 
 function gettingSkills() {
-  dataCard.skills ?
-    (skillArray = dataCard.skills,
+  if(dataCard.skills) {
+    skillArray = dataCard.skills,
     j = skillArray.length,
     acc = skillArray.length
-    ) :
+  } else {
     skillArray = [];
-  
 }
 
 
