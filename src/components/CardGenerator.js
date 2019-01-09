@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from "./Header"
 import PropTypes from "prop-types";
 
 class CardGenerator extends Component {
@@ -7,12 +8,7 @@ class CardGenerator extends Component {
 
             <div class="page">
                 <div class="box-logo-builder">
-                    <header class="page__header">
-                        <div class="builder-logo">
-                            <img class="img-logo-builder" src="../images/awesome-card-logo.svg"
-                                alt="Awesome Cards Logo" />
-                        </div>
-                    </header>
+                    <Header container="builder-logo" imgClass="img-logo-builder"/>
                 </div>
                 <section class="build-container">
                     <div class="build-card">
