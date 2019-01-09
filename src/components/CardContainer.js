@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
 
 class CardContainer extends Component {
     render() {
@@ -46,4 +47,9 @@ class CardContainer extends Component {
     }
 
 }
+
+// CardContainer.PropTypes = {
+
+// }
+
 export default CardContainer;
