@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Reset from './Reset';
-import cardview from './CardView';
+import CardView from './CardView';
 
 class CardContainer extends Component {
     render() {
@@ -8,7 +8,7 @@ class CardContainer extends Component {
             <section>
                 <div class="build-card">
                 <Reset containerReset="reset-box" linkReset="reset-link" btnReset="reset-btn"  />
-                {/* <mama cardview /> */}
+                <CardView />
                 </div>
             </section>
         )
