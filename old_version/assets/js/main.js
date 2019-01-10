@@ -561,7 +561,7 @@ function saveDataskills(a) {
 
       }
       ulBlue.innerHTML = liC3;
-    }
+    }   
   }
 }
 
