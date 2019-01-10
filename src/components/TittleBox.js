@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 
 class TittleBox extends Component {
+    constructor(props) {
+        super(props);
+
+        this.handleColpasable = this.handleColapsable.bind(this);
+      }
+
+      handleColapsable(event){
+        console.log("hello");
+
+      };
+
     render() {
         return (
-            <div className="title-box"> <i className={this.props.icon}></i>
+            <div className="title-box" onClick={this.handleColapsable}> <i className={this.props.icon}></i>
                 <span className="title-edit">{this.props.tittle}</span>
 
                 <button
