@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import CardViewHeader from './CardViewHeader';
-
+import CardViewImg from './CardViewImg';
 
 
 class CardView extends Component {
     render() { 
         return ( <div class="box-card">
         <CardViewHeader cardHeaderContainer="card-header" cardHeaderName="name-person" cardHeaderJob="work-space"/>
+        <CardViewImg cardImg="card-img" cardRandom="random"/>
         <div class="card-img" id="random"></div>
         <div class="icons-box">
             <ul class="list-icon-card">
