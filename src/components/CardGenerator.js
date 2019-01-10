@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import Header from "./Header"
 import PropTypes from "prop-types";
+<<<<<<< HEAD
 import Selector from "./Selector.js";
+=======
+import Footer from "../components/Footer"
+>>>>>>> dd6ba6f6b1df42538368db7fa38ff65073a0daec
 
 class CardGenerator extends Component {
     render() {
@@ -53,17 +57,7 @@ class CardGenerator extends Component {
                     <Selector />
 
                 </section>
-
-                <footer class="page__footer">
-                    <div class="container-footer">
-                        <div class="container-footer-logo">
-                            <p class="copyright">Awesome profile-cards @2018</p>
-                            <img class="img-footer-logo" src="assets/images/logosmall.png"
-                                alt="Logo Las Pegatinas" />
-                        </div>
-                        <img class="img-footer" src="assets/images/logo-adalab.png" alt="Logo Adalab" />
-                    </div>
-                </footer>
+                <Footer/>
             </div>
 
         );
