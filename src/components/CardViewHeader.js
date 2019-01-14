@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class CardViewHeader extends Component {
-    render() { 
-        return (
-        <div className={this.props.cardHeaderContainer}>
-        <h1 className={this.propscardHeaderName}>Nombre Apellido</h1>
-        <h3 className={this.props.cardHeaderJob}>Front-end developer</h3>
-    </div>  );
-    }
+  render() {
+      const dataCard = this.props.dataCard;
+    return (
+      <div class="card-header">
+        <h1 class="name-person">{dataCard.name}</h1>
+
+        <h3 class="work-space">Front-end developer</h3>
+      </div>
+    );
+  }
 }
 
 export default CardViewHeader;

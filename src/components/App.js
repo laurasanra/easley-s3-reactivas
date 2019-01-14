@@ -8,7 +8,7 @@ class App extends Component {
           dataCard:{
             pallete: "",
             typography: "",
-            name: "",
+            name: "pep huerta",
             job: "",
             photo: "",
             email: "",
