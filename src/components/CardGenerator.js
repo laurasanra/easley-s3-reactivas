@@ -51,7 +51,7 @@ class CardGenerator extends Component {
                         </div>
                     </div>
 
-                    <Selector />
+                    <Selector dataCard = {this.props.dataCard}/>
 
                 </section>
                 <Footer/>
