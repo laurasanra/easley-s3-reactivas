@@ -7,7 +7,7 @@ class CardViewHeader extends Component {
       <div class="card-header">
         <h1 class="name-person">{dataCard.name}</h1>
 
-        <h3 class="work-space">Front-end developer</h3>
+        <h3 class="work-space">{dataCard.job}</h3>
       </div>
     );
   }

@@ -8,14 +8,18 @@ class App extends Component {
           dataCard:{
             pallete: "",
             typography: "",
-            name: "",
-            job: "",
+            name: "Nombre Apellido",
+            job: "Front-end developer",
             photo: "",
             email: "",
             phone: "",
             linkedin: "",
             github: "",
-            skills: [],
+            skills: [
+                'emma', 
+                'Laura',
+                'queens'
+            ],
             success: "",
             cardURL: "",
             error: ""

@@ -8,7 +8,7 @@ class BoxDesign extends Component {
 
             <TittleBox icon="far fa-object-ungroup icons-edit" tittle= "Diseña" />
             
-                <div class="container-hide hide-box bring-box">
+                <div class="container-hide bring-box">
                     <div class="selectors-design">
                         <h2 class="text-color">Colores</h2>
         
