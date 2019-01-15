@@ -4,7 +4,7 @@ class TittleBox extends Component {
     constructor(props) {
         super(props);
 
-        this.handleColpasable = this.handleColapsable.bind(this);
+        this.handleColapsable = this.handleColapsable.bind(this);
       }
 
       handleColapsable(event){

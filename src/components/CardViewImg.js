@@ -4,7 +4,7 @@ class CardViewImg extends Component {
 
     render() { 
         return (
-        <div className={this.props.cardImg} id={this.props.cardRandom}></div> 
+        <div class="card-img" id="random"></div>
         );
     }
 }

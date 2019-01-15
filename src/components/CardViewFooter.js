@@ -4,10 +4,12 @@ class CardViewFooter extends Component {
 
     render() { 
         return ( 
-            <div className={this.props.cardFooterContainer}>
-            <div className={this.props.cardFooterSkillsBox}>
-                <ul className={this.props.cardFooterSkillsList}></ul>
-            </div>
+            <div class="card-footer">
+                <div class="skills">
+                    <ul class="skills__list">
+                    
+                    </ul>
+                </div>
             </div>
         );
     }
