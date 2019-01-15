@@ -8,7 +8,7 @@ class App extends Component {
           dataCard:{
             pallete: "",
             typography: "",
-            name: "pep huerta",
+            name: "",
             job: "",
             photo: "",
             email: "",
@@ -19,8 +19,16 @@ class App extends Component {
             success: "",
             cardURL: "",
             error: ""
-          }
+          },
+          backSkills:[],
         }
+        this.getBackSkills();
+    }
+
+    getBackSkills(){
+        fetch("https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json")
+        .then(response =>response.json())
+        .then(data => this.setState({backSkills:data}))
     }
     
     render(){
