@@ -11,7 +11,7 @@ class Selector extends Component {
 
         <BoxDesign dataCard = {this.props.dataCard} />
 
-        <BoxFill dataCard = {this.props.dataCard} />
+        <BoxFill dataCard = {this.props.dataCard} backSkills={this.props.backSkills} />
 
         <BoxShare  dataCard = {this.props.dataCard}/>
       </div>

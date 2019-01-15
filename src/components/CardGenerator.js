@@ -14,7 +14,7 @@ class CardGenerator extends Component {
         </div>
         <section class="build-container">
           <CardView dataCard={this.props.dataCard}/>
-          <Selector dataCard={this.props.dataCard} />
+          <Selector dataCard={this.props.dataCard} backSkills={this.props.backSkills}/>
         </section>
         <Footer />
       </div>
