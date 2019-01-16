@@ -9,7 +9,7 @@ class App extends Component {
             pallete: "",
             typography: "",
             name: "",
-            job: "Front-end developer",
+            job: "",
             photo: "",
             email: "",
             phone: "",
