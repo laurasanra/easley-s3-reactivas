@@ -15,12 +15,7 @@ class App extends Component {
             phone: "",
             linkedin: "",
             github: "",
-            skills: [
-                'emma', 
-                'Laura',
-                'queens',
-                'nasi'
-            ],
+            skills: [],
             success: "",
             cardURL: "",
             error: ""
