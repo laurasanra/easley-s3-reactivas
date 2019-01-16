@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TittleBox from "./TittleBox";
+import  "./BoxFill.scss";
 
 class BoxFill extends Component {
   render() {
@@ -88,23 +89,24 @@ class BoxFill extends Component {
               required
             />
           </div>
-          <p class="contact checkbox_contact">Habilidades (máximo 3)</p>
-          <div class="container-checks check_styles">
-            <ul className="check_styles">
-            
-              {skills.map((skill, index) =>{
+          <seccion className="container-checkSkills">
+            <p class="contact checkbox_contact">Habilidades (máximo 3)</p>
+            {/* <div class="container-checks check_styles"> */}
+              <ul className="check_styles container-checks skillsOptions">
+                {skills.map((skill, index) =>{
                   return (
-                    <li className="checkbox_input" key={index}>
+                    <div className="check_styles" key={index}>
                     <label htmlFor={skill}>
-                      <input className="checkbox_input" id={skill} type="checkbox" value={skill} name="" />
+                      <input className="skill-Box-Check" id={skill} type="checkbox" value={skill} name="" />
                       {skill}
                     </label>
-                  </li>
+                  </div>
                   )
                   
               } )}
             </ul>
-          </div>
+          {/* </div> */}
+          </seccion> 
         </form>
       </div>
     );
