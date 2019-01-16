@@ -9,7 +9,7 @@ class Selector extends Component {
     return (
       <div className="selectors-container">
 
-        <BoxDesign dataCard = {this.props.dataCard} />
+        <BoxDesign dataCard = {this.props.dataCard} changePalette={this.props.changePalette}/>
 
         <BoxFill dataCard = {this.props.dataCard} backSkills={this.props.backSkills} />
 

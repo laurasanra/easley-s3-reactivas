@@ -12,10 +12,10 @@ class BoxDesign extends Component {
                     <div class="selectors-design">
                         <h2 class="text-color">Colores</h2>
         
-                        <ul class="colors-list">
+                        <ul class="colors-list" onChage={this.props.changePalette}>
                             <li class="list-pallete">
                                 <label for="pallete-blue" class="label-color">
-                                    <input id="pallete-blue" type="radio" value="1" name="pallete-colors"
+                                    <input id="pallete-blue" type="radio" value="1" name="pallete-colors" onChange={this.props.changePalette}
                                         class="selection-input" />
                                 </label>
                                 <div class="pallet-box">
@@ -26,7 +26,7 @@ class BoxDesign extends Component {
                             </li>
                             <li class="list-pallete">
                                 <label for="pallete-red" class="label-color">
-                                    <input id="pallete-red" type="radio" value="2" name="pallete-colors" class="selection-input"
+                                    <input id="pallete-red" type="radio" value="2" name="pallete-colors" class="selection-input" onChange={this.props.changePalette}
                                     />
                                 </label>
                                 <div class="pallet-box">
@@ -38,7 +38,7 @@ class BoxDesign extends Component {
                             <li class="list-pallete">
                                 <label for="pallete-grey" class="label-color">
                                     <input id="pallete-grey" type="radio" value="3" name="pallete-colors"
-                                        class="selection-input" />
+                                        class="selection-input" onChange={this.props.changePalette}/>
                                 </label>
                                 <div class="pallet-box">
                                     <div class="grey-dark-color"></div>
