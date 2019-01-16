@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class CardViewFooter extends Component {
 
-    render() { 
+    render() {
         const dataSkills = this.props.dataCard.skills;
         return ( 
             <div class="card-footer">
