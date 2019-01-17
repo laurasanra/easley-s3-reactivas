@@ -20,9 +20,9 @@ class CardViewFooter extends Component {
     }
     render() {
         return (
-            <div class="card-footer">
-                <div class="skills">
-                    <ul class="skills__list">
+            <div className="card-footer">
+                <div className="skills">
+                    <ul className="skills__list">
                         {this.addSkillsArr()}
                     </ul>
                 </div>

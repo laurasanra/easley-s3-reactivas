@@ -3,23 +3,23 @@ import React, { Component } from "react";
 class CardViewSocial extends Component {
   render() {
     return (
-      <div class="icons-box">
-        <ul class="list-icon-card">
-          <li class="icons-contein icon-movil">
+      <div className="icons-box">
+        <ul className="list-icon-card">
+          <li className="icons-contein icon-movil">
             {" "}
-            <a href={`tel: +34${this.props.dataCard.phone}`} class="icons-card">
-              <i class="fas fa-mobile-alt" />
+            <a href={`tel: +34${this.props.dataCard.phone}`} className="icons-card">
+              <i className="fas fa-mobile-alt" />
             </a>
           </li>
-          <li class="icons-contein icon-mail">
+          <li className="icons-contein icon-mail">
             {" "}
-            <a href={`mailto: ${this.props.dataCard.email}`} class="icons-card">
-              <i class="far fa-envelope" />
+            <a href={`mailto: ${this.props.dataCard.email}`} className="icons-card">
+              <i className="far fa-envelope" />
             </a>
           </li>
-          <li class="icons-contein icon-linkedin">
+          <li className="icons-contein icon-linkedin">
             {" "}
-            <a href={`https://www.linkedin.com/in/${this.props.dataCard.linkedin}`} class="icons-card" target="_blank">
+            <a href={`https://www.linkedin.com/in/${this.props.dataCard.linkedin}`} className="icons-card" target="_blank">
               <i class="fab fa-linkedin-in" />
             </a>
           </li>

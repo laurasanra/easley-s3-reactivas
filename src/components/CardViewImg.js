@@ -11,13 +11,13 @@ class CardViewImg extends Component {
         backgroundImage: `url(${DefaultImg})`
         }
         if(dataCardPhoto === ""){
-            return(<div class="card-img" id="random" style={defaultImg}>
+            return(<div className="card-img" id="random" style={defaultImg}>
             </div>)
             
         }else{
 
             return (
-                <div class="card-img" id="random" style={Img}>
+                <div className="card-img" id="random" style={Img}>
                 </div>
             );
         }
