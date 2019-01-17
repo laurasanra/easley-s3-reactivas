@@ -20,6 +20,8 @@ class BoxFill extends Component {
               type="text"
               name="name"
               required
+              onChange={this.props.changeName}
+              value={this.props.dataCard.name}
             />
           </div>
           <div class="contact">
@@ -30,6 +32,8 @@ class BoxFill extends Component {
               type="text"
               name="job"
               required
+              onChange={this.props.changeJob}
+              value={this.props.dataCard.job}
             />
           </div>
           <div class="contact">
@@ -57,6 +61,8 @@ class BoxFill extends Component {
               type="email"
               name="email"
               required
+              onChange={this.props.changeEmail}
+              value={this.props.dataCard.email}
             />
           </div>
           <div class="contact">
@@ -67,6 +73,8 @@ class BoxFill extends Component {
               type="tel"
               name="phone"
               required
+              onChange={this.props.changePhone}
+              value={this.props.dataCard.phone}
             />
           </div>
           <div class="contact">
