@@ -29,6 +29,8 @@ class App extends Component {
     this.changeJob = this.changeJob.bind(this);
     this.changeEmail = this.changeEmail.bind(this);
     this.changePhone = this.changePhone.bind(this);
+    this.changeLinkedin = this.changeLinkedin.bind(this);
+    this.changeGithub = this.changeGithub.bind(this);
   }
 
   getBackSkills() {
@@ -111,6 +113,31 @@ class App extends Component {
     }));
   }
 
+  changeLinkedin(e) {
+    const valuelinkedin = e.target.value;
+    console.log(valuelinkedin)
+
+    this.setState(prevState => ({
+      dataCard: {
+        ...prevState.dataCard,
+        linkedin: valuelinkedin
+      }
+    }));
+  }
+
+
+  changeGithub(e) {
+    const valuegithub = e.target.value;
+    console.log(valuegithub)
+
+    this.setState(prevState => ({
+      dataCard: {
+        ...prevState.dataCard,
+        github: valuegithub
+      }
+    }));
+  }
+
   render() {
     console.log(this.state)
     const changePalette = this.changePallete;
@@ -119,6 +146,8 @@ class App extends Component {
     const changeJob = this.changeJob;
     const changeEmail = this.changeEmail;
     const changePhone = this.changePhone;
+    const changeLinkedin = this.changeLinkedin;
+    const changeGithub = this.changeGithub;
     return (
       <CardGenerator
         dataCard={this.state.dataCard}
@@ -129,6 +158,8 @@ class App extends Component {
         changeJob={changeJob}
         changeEmail={changeEmail}
         changePhone={changePhone}
+        changeLinkedin={changeLinkedin}
+        changeGithub={changeGithub}
       />
     );
   }

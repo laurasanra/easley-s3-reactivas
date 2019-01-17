@@ -85,6 +85,8 @@ class BoxFill extends Component {
               type="text"
               name="linkedin"
               required
+              onChange={this.props.changeLinkedin}
+              value={this.props.dataCard.linkedin}
             />
           </div>
           <div class="contact">
@@ -95,6 +97,8 @@ class BoxFill extends Component {
               type="text"
               name="github"
               required
+              onChange={this.props.changeGithub}
+              value={this.props.dataCard.github}
             />
           </div>
           <seccion className="container-checkSkills">
