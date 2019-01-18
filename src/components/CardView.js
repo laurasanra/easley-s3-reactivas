@@ -12,10 +12,16 @@ class CardView extends Component {
         const incomingColor = this.props.dataCard.pallete;
         let selectedColor ="";
         if(incomingColor === "1"){
-             selectedColor = " color-red";
-        }else {
-         selectedColor = "color-grey";
-        }
+             selectedColor = "";
+        }else if(incomingColor === "2"){
+         selectedColor = "color-red";
+        }else if(incomingColor === "3"){
+            selectedColor = "color-grey";
+           }else if(incomingColor === "4"){
+            selectedColor = "color-gum";
+           }else if(incomingColor === "5"){
+            selectedColor = "color-purple";
+           }
         return selectedColor;
     }
 
