@@ -3,6 +3,26 @@ import TittleBox from "./TittleBox";
 import  "./BoxFill.scss";
 
 class BoxFill extends Component {
+  constructor(props) {
+    super(props);
+    this.fakeClick = this.fakeClick.bind(this)
+    this.fileInput = React.createRef();
+    this.changeImage = this.changeImage.bind(this);
+  }
+
+  fakeClick(){
+    return this.props.fileInput.current.click();
+  }
+
+  changeImage(file) {
+    let fileReader = new FileReader();
+    fileReader.onloadend = this.handleFileReader; 
+  }
+
+  onChangeImage(event){
+    return this.props.changeImage(event.target.files[0]);
+  }
+
   render() {
     const skills = this.props.backSkills;
     
@@ -36,20 +56,22 @@ class BoxFill extends Component {
               value={this.props.dataCard.job}
             />
           </div>
-          <div class="contact">
+          <div className="contact">
             <label for="image">Imagen de perfil</label>
             <div class="add_image">
-              <button class="button_ad_image" type="submit" value="submit">
+              <button className="button_ad_image" type="submit" value="submit" onClick={this.fakeClick} >
                 Añadir imagen
               </button>
               <input
                 type="file"
                 name="addImage"
                 id="img-selector"
-                class="btn__hidden"
-              />
-              <div class="preview-box">
-                <img class="preview-img" src="" />
+                className="btn__hidden"
+                ref={this.props.fileInput}
+                onChange={this.onChangeImage}></input>
+            
+              <div className="preview-box">
+                <img className="preview-img" src="" />
               </div>
             </div>
           </div>
