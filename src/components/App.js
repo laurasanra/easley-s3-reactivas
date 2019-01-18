@@ -6,8 +6,8 @@ class App extends Component {
         super(props);
         this.state = {
           dataCard:{
-            pallete: "5",
-            typography: "",
+            pallete: "1",
+            typography: "2",
             name: "",
             job: "",
             photo: "",
