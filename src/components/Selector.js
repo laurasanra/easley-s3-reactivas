@@ -10,18 +10,23 @@ class Selector extends Component {
     this.state = {
       index: "1"
     }
-
+    this.handleCollapsable = this.handleCollapsable.bind(this);
   }
+
+  handleCollapsable(event){
+    console.log("hello");
+
+  };
   
   render() {
     return (
       <div className="selectors-container">
 
-        <BoxDesign dataCard = {this.props.dataCard} />
+        <BoxDesign dataCard = {this.props.dataCard} collapsableIndex ={this.state.index} handleCollapsable={this.handleCollapsable}/>
 
-        <BoxFill dataCard = {this.props.dataCard} backSkills={this.props.backSkills} />
+        <BoxFill dataCard = {this.props.dataCard} backSkills={this.props.backSkills} collapsableIndex ={this.state.index} />
 
-        <BoxShare  dataCard = {this.props.dataCard}/>
+        <BoxShare  dataCard = {this.props.dataCard} collapsableIndex ={this.state.index}/>
       </div>
     );
   }

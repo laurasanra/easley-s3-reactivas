@@ -6,7 +6,7 @@ class BoxDesign extends Component {
         return (
             <div class="box-selector edit-design flex-container">
 
-            <TittleBox icon="far fa-object-ungroup icons-edit" tittle= "Diseña" />
+            <TittleBox icon="far fa-object-ungroup icons-edit" tittle= "Diseña" handleCollapsable = {this.props.handleCollapsable}/>
             
                 <div class="container-hide bring-box">
                     <div class="selectors-design">
