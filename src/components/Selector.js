@@ -15,9 +15,10 @@ class Selector extends Component {
   }
 
   handleCollapsable(event) {
-    if(this.state.index === event.currentTarget.attributes.index.value){
+    const { value } = event.currentTarget.attributes.index;
+    if (this.state.index === value) {
       this.setState({ index: "0" })
-    } else {this.setState({ index: event.currentTarget.attributes.index.value })}    
+    } else { this.setState({ index: value }) }
   };
 
   hideBox(index) {
@@ -38,7 +39,7 @@ class Selector extends Component {
 
         <BoxFill dataCard={this.props.dataCard} backSkills={this.props.backSkills} index="2" handleCollapsable={this.handleCollapsable} hideBox={this.hideBox} />
 
-        <BoxShare dataCard={this.props.dataCard} index="3" handleCollapsable={this.handleCollapsable} hideBox={this.hideBox}/>
+        <BoxShare dataCard={this.props.dataCard} index="3" handleCollapsable={this.handleCollapsable} hideBox={this.hideBox} />
       </div>
     );
   }

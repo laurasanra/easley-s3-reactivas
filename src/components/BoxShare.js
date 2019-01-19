@@ -6,31 +6,31 @@ class BoxShare extends Component {
     const {index, handleCollapsable, hideBox} = this.props;
     return (
       <div>
-        <div class="box-selector edit-share">
+        <div className="box-selector edit-share">
           <TittleBox icon="fas fa-share-alt icons-edit" tittle="Comparte" handleCollapsable = {handleCollapsable} index = {index}/>
 
-          <div class= {`card-share flex-container ${hideBox(index)}`}>
-            <div class="box-btn-share">
-              <button class="btn-share" type="submit">
+          <div className= {`card-share flex-container ${hideBox(index)}`}>
+            <div className="box-btn-share">
+              <button className="btn-share" type="submit">
                 {" "}
-                <i class="far fa-id-card" />
-                <span class="title-edit"> Crear tarjeta </span>
+                <i className="far fa-id-card" />
+                <span className="title-edit"> Crear tarjeta </span>
               </button>
             </div>
           </div>
         </div>
 
-        <div class="edit-share card-created hide-box bring-box">
-          <div class="card-msg">
-            <p class="msg-text">La tarjeta ha sido creada:</p>
+        <div className="edit-share card-created hide-box bring-box">
+          <div className="card-msg">
+            <p className="msg-text">La tarjeta ha sido creada:</p>
 
-            <p class="share-link" href="#">
-              <span class="link" />
+            <p className="share-link" href="#">
+              <span className="link" />
             </p>
-            <button class="btn-twitter">
+            <button className="btn-twitter">
               {" "}
-              <i class="fab fa-twitter" />
-              <a class="twitter-link" target="_blank" href="">
+              <i className="fab fa-twitter" />
+              <a className="twitter-link" target="_blank" href="">
                 Compartir en twitter
               </a>
             </button>

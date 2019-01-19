@@ -28,7 +28,7 @@ class CardView extends Component {
     render() {
 
         return ( 
-        <div class="build-card">
+        <div className="build-card">
             <Reset dataCard={this.props.dataCard}/>
             <div className={`box-card ${this.changePalette()}`}>
                 <CardViewHeader dataCard={this.props.dataCard}/>

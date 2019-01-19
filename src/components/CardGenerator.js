@@ -8,11 +8,11 @@ import CardView from "./CardView";
 class CardGenerator extends Component {
   render() {
     return (
-      <div class="page">
-        <div class="box-logo-builder">
+      <div className="page">
+        <div className="box-logo-builder">
           <Header container="builder-logo" imgClass="img-logo-builder" />
         </div>
-        <section class="build-container">
+        <section className="build-container">
           <CardView dataCard={this.props.dataCard}/>
           <Selector dataCard={this.props.dataCard} backSkills={this.props.backSkills}/>
         </section>

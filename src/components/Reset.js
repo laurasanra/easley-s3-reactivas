@@ -16,10 +16,10 @@ class Reset extends Component {
 
   render() {
     return (
-      <div class="reset-box">
-        <a href="/" class="reset-link" onClick={this.handleReset}>
-          <div class="reset-btn">
-            <i class="far fa-trash-alt" /> reset
+      <div className="reset-box">
+        <a href="/" className="reset-link" onClick={this.handleReset}>
+          <div className="reset-btn">
+            <i className="far fa-trash-alt" /> reset
           </div>
         </a>
       </div>
