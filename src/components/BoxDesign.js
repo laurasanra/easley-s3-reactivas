@@ -2,21 +2,33 @@ import React, { Component } from 'react';
 import TittleBox from './TittleBox';
 
 class BoxDesign extends Component {
-    render(){
-        return (
-            <div class="box-selector edit-design flex-container">
 
-            <TittleBox icon="far fa-object-ungroup icons-edit" tittle= "Diseña" handleCollapsable = {this.props.handleCollapsable}/>
-            
-                <div class="container-hide bring-box">
-                    <div class="selectors-design">
-                        <h2 class="text-color">Colores</h2>
-        
-                        <ul class="colors-list">
-                            <li class="list-pallete">
-                                <label for="pallete-blue" class="label-color">
+  /*  hideBox() {
+        let hideBox = "";
+        const { index } = this.props;
+        const { openIndex } = this.props;
+        if (index !== openIndex) {
+            hideBox = "hide-box"
+        }
+        return hideBox;
+    }*/
+
+    render() {
+        const {index, handleCollapsable, hideBox} = this.props;
+            return (
+            <div className="box-selector edit-design flex-container">
+
+                <TittleBox icon="far fa-object-ungroup icons-edit" tittle="Diseña" handleCollapsable={handleCollapsable} index={index} />
+
+                <div className={`container-hide bring-box ${hideBox(index)}`}>
+                    <div className="selectors-design">
+                        <h2 className="text-color">Colores</h2>
+
+                        <ul className="colors-list">
+                            <li className="list-pallete">
+                                <label for="pallete-blue" className="label-color">
                                     <input id="pallete-blue" type="radio" value="1" name="pallete-colors"
-                                        class="selection-input" />
+                                        className="selection-input" />
                                 </label>
                                 <div class="pallet-box">
                                     <div class="blue-dark-color"></div>
@@ -50,7 +62,7 @@ class BoxDesign extends Component {
                                 <label for="pallete-gum" class="label-color">
                                     <input id="pallete-gum" type="radio" value="4" name="pallete-colors" class="selection-input"
                                     /> <i class="far fa-gem"></i>
-        
+
                                 </label>
                                 <div class="pallet-box">
                                     <div class="blue-gum-color"></div>
@@ -62,7 +74,7 @@ class BoxDesign extends Component {
                                 <label for="pallete-purple" class="label-color">
                                     <input id="pallete-purple" type="radio" value="5" name="pallete-colors"
                                         class="selection-input" /> <i class="far fa-gem"></i>
-        
+
                                 </label>
                                 <div class="pallet-box">
                                     <div class="purple-midtone-color"></div>
@@ -72,10 +84,10 @@ class BoxDesign extends Component {
                             </li>
                         </ul>
                     </div>
-        
+
                     <div class="selectors-font">
                         <h2 class="text-color">Fuentes</h2>
-        
+
                         <ul class="fonts-list">
                             <li class="list-font">
                                 <label for="font-ubuntu" class="label-font">

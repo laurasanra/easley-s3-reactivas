@@ -5,13 +5,13 @@ import  "./BoxFill.scss";
 class BoxFill extends Component {
   render() {
     const skills = this.props.backSkills;
-    
+    const {index, handleCollapsable, hideBox} = this.props;    
 
     return (
       <div class="box-selector edit-fill flex-container">
-        <TittleBox icon="far fa-keyboard icons-edit" tittle="Rellena" />
+        <TittleBox icon="far fa-keyboard icons-edit" tittle="Rellena" handleCollapsable = {handleCollapsable} index = {index}/>
 
-        <form class="fill  bring-box">
+        <form class={`fill bring-box ${hideBox(index)}`}>
           <div class="contact">
             <label for="firstName">Nombre completo</label>
             <input

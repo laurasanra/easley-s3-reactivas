@@ -3,12 +3,13 @@ import TittleBox from "./TittleBox";
 
 class BoxShare extends Component {
   render() {
+    const {index, handleCollapsable, hideBox} = this.props;
     return (
       <div>
         <div class="box-selector edit-share">
-          <TittleBox icon="fas fa-share-alt icons-edit" tittle="Comparte" />
+          <TittleBox icon="fas fa-share-alt icons-edit" tittle="Comparte" handleCollapsable = {handleCollapsable} index = {index}/>
 
-          <div class="card-share flex-container">
+          <div class= {`card-share flex-container ${hideBox(index)}`}>
             <div class="box-btn-share">
               <button class="btn-share" type="submit">
                 {" "}
