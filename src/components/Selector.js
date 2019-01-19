@@ -16,17 +16,13 @@ class Selector extends Component {
 
   handleCollapsable(event) {
     const { value } = event.currentTarget.attributes.index;
-    if (this.state.index === value) {
-      this.setState({ index: "0" })
-    } else { this.setState({ index: value }) }
+    (this.state.index === value) ? this.setState({ index: "0" }) : this.setState({ index: value })
   };
 
   hideBox(index) {
     let hideBox = "";
     const openIndex = this.state.index;
-    if (index !== openIndex) {
-      hideBox = "hide-box"
-    }
+    (index !== openIndex) ? hideBox = "hide-box" : hideBox = "";
     return hideBox;
   }
 
