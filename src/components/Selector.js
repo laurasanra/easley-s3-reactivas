@@ -15,7 +15,9 @@ class Selector extends Component {
   }
 
   handleCollapsable(event) {
-    this.setState({ index: event.currentTarget.attributes.index.value })
+    if(this.state.index === event.currentTarget.attributes.index.value){
+      this.setState({ index: "0" })
+    } else {this.setState({ index: event.currentTarget.attributes.index.value })}    
   };
 
   hideBox(index) {
