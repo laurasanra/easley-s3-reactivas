@@ -2,12 +2,18 @@ import React, { Component } from "react";
 import TittleBox from "./TittleBox";
 import  "./BoxFill.scss";
 
+const fr = new FileReader();
+
 class BoxFill extends Component {
   constructor(props) {
     super(props);
     this.fakeClick = this.fakeClick.bind(this)
     this.fileInput = React.createRef();
     this.changeImage = this.changeImage.bind(this);
+    this.state = {
+      fileName: 'Image', 
+      fileUrl: ''
+    }
   }
 
   fakeClick(){
@@ -17,6 +23,13 @@ class BoxFill extends Component {
   changeImage(file) {
     let fileReader = new FileReader();
     fileReader.onloadend = this.handleFileReader; 
+  }
+
+  writeImage() {
+    const url = fr.result;
+    this.setState({
+      fileUrl: url
+    });
   }
 
   onChangeImage(event){
