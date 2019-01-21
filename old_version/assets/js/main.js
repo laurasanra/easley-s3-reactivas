@@ -401,7 +401,7 @@ function gettingSkills() {
     j = skillArray.length,
     acc = skillArray.length
   } else {
-    skillArray = [];
+    skillArray = []}
 }
 
 
