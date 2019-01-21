@@ -32,6 +32,7 @@ class App extends Component {
     this.changeLinkedin = this.changeLinkedin.bind(this);
     this.changeGithub = this.changeGithub.bind(this);
     this.changeImage = this.changeImage.bind(this);
+    this.changeSkills = this.changeSkills.bind(this);
   }
 
   getBackSkills() {
@@ -65,6 +66,9 @@ class App extends Component {
     }));
   }
 
+changeSkills(){
+  console.log(this.state.skills)
+}
 
   changeName(e) {
     const valuename = e.target.value;
@@ -158,6 +162,8 @@ class App extends Component {
     const changeLinkedin = this.changeLinkedin;
     const changeGithub = this.changeGithub;
     const changeImage = this.changeImage;
+    const changeSkills = this.changeSkills;
+
     return (
       <CardGenerator
         dataCard={this.state.dataCard}
@@ -171,6 +177,7 @@ class App extends Component {
         changePhone={changePhone}
         changeLinkedin={changeLinkedin}
         changeGithub={changeGithub}
+        changeSkills={changeSkills}
       />
     );
   }
