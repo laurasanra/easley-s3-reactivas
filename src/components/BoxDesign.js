@@ -3,10 +3,13 @@ import TittleBox from './TittleBox';
 
 class BoxDesign extends Component {
 
-<<<<<<< HEAD
-            <TittleBox icon="far fa-object-ungroup icons-edit" tittle= "Diseña" />
-            
-                <div class="container-hide bring-box">
+    render() {
+        const {index, handleCollapsable, hideBox} = this.props;
+            return (
+            <div className="box-selector edit-design flex-container">
+            <TittleBox icon="far fa-object-ungroup icons-edit" tittle="Diseña" handleCollapsable={handleCollapsable} index={index} />
+            <div className={`container-hide bring-box ${hideBox(index)}`}>
+            <div class="container-hide bring-box">
                     <div class="selectors-design">
                         <h2 class="text-color">Colores</h2>
         
@@ -15,40 +18,17 @@ class BoxDesign extends Component {
                                 <label for="pallete-blue" class="label-color">
                                     <input id="pallete-blue" type="radio" value="1" name="pallete-colors" onChange={this.props.changePalette}
                                         class="selection-input" checked={this.props.dataCard.pallete === "1"} />
-=======
-    render() {
-        const {index, handleCollapsable, hideBox} = this.props;
-            return (
-            <div className="box-selector edit-design flex-container">
 
-                <TittleBox icon="far fa-object-ungroup icons-edit" tittle="Diseña" handleCollapsable={handleCollapsable} index={index} />
-
-                <div className={`container-hide bring-box ${hideBox(index)}`}>
-                    <div className="selectors-design">
-                        <h2 className="text-color">Colores</h2>
-
-                        <ul className="colors-list">
-                            <li className="list-pallete">
-                                <label htmlFor="pallete-blue" className="label-color">
-                                    <input id="pallete-blue" type="radio" value="1" name="pallete-colors"
-                                        className="selection-input" />
->>>>>>> collapsables
-                                </label>
+                                   </label>
                                 <div className="pallet-box">
                                     <div className="blue-dark-color"></div>
                                     <div className="blue-midtone-color"></div>
                                     <div className="blue-ligth-color"></div>
                                 </div>
                             </li>
-<<<<<<< HEAD
                             <li class="list-pallete">
                                 <label for="pallete-red" class="label-color">
                                     <input id="pallete-red" type="radio" value="2" name="pallete-colors" class="selection-input" onChange={this.props.changePalette} checked={this.props.dataCard.pallete === "2"}
-=======
-                            <li className="list-pallete">
-                                <label htmlFor="pallete-red" className="label-color">
-                                    <input id="pallete-red" type="radio" value="2" name="pallete-colors" className="selection-input"
->>>>>>> collapsables
                                     />
                                 </label>
                                 <div className="pallet-box">
@@ -60,11 +40,7 @@ class BoxDesign extends Component {
                             <li className="list-pallete">
                                 <label htmlFor="pallete-grey" className="label-color">
                                     <input id="pallete-grey" type="radio" value="3" name="pallete-colors"
-<<<<<<< HEAD
                                         class="selection-input" onChange={this.props.changePalette} checked={this.props.dataCard.pallete === "3"}/>
-=======
-                                        className="selection-input" />
->>>>>>> collapsables
                                 </label>
                                 <div className="pallet-box">
                                     <div className="grey-dark-color"></div>
@@ -98,7 +74,6 @@ class BoxDesign extends Component {
                             </li>
                         </ul>
                     </div>
-<<<<<<< HEAD
         
                     <div class="selectors-font">
                         <h2 class="text-color">Fuentes</h2>
@@ -108,49 +83,24 @@ class BoxDesign extends Component {
                                 <label for="font-ubuntu" class="label-font">
                                     <input id="font-ubuntu" type="radio" value="1" name="select-font" class="selection-input" onChange={this.props.changeTypography}
                                     checked={this.props.dataCard.typography === "1"}/>
-=======
-
-                    <div className="selectors-font">
-                        <h2 className="text-color">Fuentes</h2>
-
-                        <ul className="fonts-list">
-                            <li className="list-font">
-                                <label htmlFor="font-ubuntu" className="label-font">
-                                    <input id="font-ubuntu" type="radio" value="1" name="select-font" className="selection-input"
-                                    />
->>>>>>> collapsables
                                 </label>
                                 <div className="font-box">
                                     <div className="select-ubuntu">Ubuntu</div>
                                 </div>
                             </li>
-<<<<<<< HEAD
                             <li class="list-font">
                                 <label for="font-comic" class="label-font">
                                     <input id="font-comic" type="radio" value="2" name="select-font" class="selection-input" onChange={this.props.changeTypography}
                                     checked={this.props.dataCard.typography === "2"}/>
-=======
-                            <li className="list-font">
-                                <label htmlFor="font-comic" className="label-font">
-                                    <input id="font-comic" type="radio" value="2" name="select-font" className="selection-input"
-                                    />
->>>>>>> collapsables
                                 </label>
                                 <div className="font-box">
                                     <div className="select-comic">Comic Sans</div>
                                 </div>
                             </li>
-<<<<<<< HEAD
                             <li class="list-font">
                                 <label for="font-montse" class="label-font">
                                     <input id="font-montse" type="radio" value="3" name="select-font" class="selection-input" onChange={this.props.changeTypography}
                                     checked={this.props.dataCard.typography === "3"}/>
-=======
-                            <li className="list-font">
-                                <label htmlFor="font-montse" className="label-font">
-                                    <input id="font-montse" type="radio" value="3" name="select-font" className="selection-input"
-                                    />
->>>>>>> collapsables
                                 </label>
                                 <div className="font-box">
                                     <div className="select-montse">Montserrat</div>
@@ -159,6 +109,7 @@ class BoxDesign extends Component {
                         </ul>
                     </div>
                 </div>
+            </div>
             </div>
         )
     }

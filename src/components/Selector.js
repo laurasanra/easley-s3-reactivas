@@ -31,15 +31,9 @@ class Selector extends Component {
     return (
       <div className="selectors-container">
 
-<<<<<<< HEAD
-        <BoxDesign dataCard = {this.props.dataCard} changePalette={this.props.changePalette} changeTypography={this.props.changeTypography}/>
+        <BoxDesign dataCard = {this.props.dataCard} changePalette={this.props.changePalette} changeTypography={this.props.changeTypography} index="1" handleCollapsable={this.handleCollapsable} hideBox={this.hideBox} />
 
-        <BoxFill dataCard = {this.props.dataCard} backSkills={this.props.backSkills} changeName={this.props.changeName} changeJob={this.props.changeJob} changeEmail={this.props.changeEmail} changePhone={this.props.changePhone} changeLinkedin={this.props.changeLinkedin} changeGithub={this.props.changeGithub} />
-=======
-        <BoxDesign dataCard={this.props.dataCard} index="1" handleCollapsable={this.handleCollapsable} hideBox={this.hideBox} />
-
-        <BoxFill dataCard={this.props.dataCard} backSkills={this.props.backSkills} index="2" handleCollapsable={this.handleCollapsable} hideBox={this.hideBox} />
->>>>>>> collapsables
+        <BoxFill dataCard = {this.props.dataCard} backSkills={this.props.backSkills} changeName={this.props.changeName} changeJob={this.props.changeJob} changeEmail={this.props.changeEmail} changePhone={this.props.changePhone} changeLinkedin={this.props.changeLinkedin} changeGithub={this.props.changeGithub} index="2" handleCollapsable={this.handleCollapsable} hideBox={this.hideBox} />
 
         <BoxShare dataCard={this.props.dataCard} index="3" handleCollapsable={this.handleCollapsable} hideBox={this.hideBox} />
       </div>
