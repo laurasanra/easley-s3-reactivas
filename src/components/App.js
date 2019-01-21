@@ -1,27 +1,29 @@
 import React, { Component } from "react";
 import CardGenerator from "./CardGenerator";
 
+const defaultData = {
+  pallete: "1",
+  typography: "2",
+  name: "",
+  job: "",
+  photo: "",
+  email: "",
+  phone: "",
+  linkedin: "",
+  github: "",
+  skills: ["HTML", "CSS", "Gulp"],
+  success: "",
+  cardURL: "",
+  error: ""}
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataCard: {
-        pallete: "1",
-        typography: "2",
-        name: "",
-        job: "",
-        photo: "",
-        email: "",
-        phone: "",
-        linkedin: "",
-        github: "",
-        skills: ["HTML", "CSS", "Gulp"],
-        success: "",
-        cardURL: "",
-        error: ""
-      },
+      dataCard: this.getSavedData(),
       backSkills: [""]
     };
+    
     this.getBackSkills();
     this.changePallete = this.changePallete.bind(this);
     this.changeTypography = this.changeTypography.bind(this);
@@ -32,6 +34,20 @@ class App extends Component {
     this.changeLinkedin = this.changeLinkedin.bind(this);
     this.changeGithub = this.changeGithub.bind(this);
     this.changeImage = this.changeImage.bind(this);
+  }
+
+  getSavedData(){
+    const storageData = localStorage.getItem('storageData');
+    console.log(storageData)
+    if (!storageData){
+      return JSON.parse(storageData);
+    } else {
+      return {...defaultData};
+    }
+  }
+
+  saveData(data){
+    localStorage.setItem('storageData', JSON.stringify(data))
   }
 
   getBackSkills() {
@@ -55,7 +71,6 @@ class App extends Component {
 
   changeTypography(e) {
     const valuetypography = e.target.value;
-    console.log(valuetypography)
 
     this.setState(prevState => ({
       dataCard: {
@@ -68,19 +83,21 @@ class App extends Component {
 
   changeName(e) {
     const valuename = e.target.value;
-    console.log(valuename)
 
-    this.setState(prevState => ({
-      dataCard: {
+    this.setState(prevState => {
+      const updatedName = {
         ...prevState.dataCard,
         name: valuename
+      };
+      this.saveData(updatedName);
+      return {
+        dataCard: updatedName
       }
-    }));
+      })
   }
 
   changeJob(e) {
     const valuejob = e.target.value;
-    console.log(valuejob)
 
     this.setState(prevState => ({
       dataCard: {
@@ -101,7 +118,6 @@ class App extends Component {
 
   changeEmail(e) {
     const valueemail = e.target.value;
-    console.log(valueemail)
 
     this.setState(prevState => ({
       dataCard: {
@@ -113,7 +129,6 @@ class App extends Component {
 
   changePhone(e) {
     const valuephone = e.target.value;
-    console.log(valuephone)
 
     this.setState(prevState => ({
       dataCard: {
@@ -125,7 +140,6 @@ class App extends Component {
 
   changeLinkedin(e) {
     const valuelinkedin = e.target.value;
-    console.log(valuelinkedin)
 
     this.setState(prevState => ({
       dataCard: {
@@ -138,7 +152,6 @@ class App extends Component {
 
   changeGithub(e) {
     const valuegithub = e.target.value;
-    console.log(valuegithub)
 
     this.setState(prevState => ({
       dataCard: {
