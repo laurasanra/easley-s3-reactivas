@@ -39,14 +39,13 @@ class App extends Component {
 
   getSavedData() {
     const storageData = localStorage.getItem('storageData');
-    console.log(storageData)
     if (storageData !== null) {
       return JSON.parse(storageData);
     } else {
       return { ...defaultData };
     }
   }
-
+  
   saveData(data) {
     localStorage.setItem('storageData', JSON.stringify(data))
   }
@@ -203,6 +202,7 @@ class App extends Component {
     const changeLinkedin = this.changeLinkedin;
     const changeGithub = this.changeGithub;
     const changeImage = this.changeImage;
+    
     return (
       <CardGenerator
         dataCard={this.state.dataCard}
