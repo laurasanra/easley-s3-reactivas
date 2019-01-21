@@ -6,7 +6,7 @@ class CardContainer extends Component {
     render() {
         return (
             <section>
-                <div class="build-card">
+                <div className="build-card">
                 <Reset containerReset="reset-box" linkReset="reset-link" btnReset="reset-btn"  />
                 <CardView />
                 </div>

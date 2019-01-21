@@ -1,22 +1,13 @@
 import React, { Component } from 'react';
 
 class TittleBox extends Component {
-    constructor(props) {
-        super(props);
-
-        this.handleColapsable = this.handleColapsable.bind(this);
-      }
-
-      handleColapsable(event){
-        console.log("hello");
-
-      };
-
+    
     render() {
+        const { handleCollapsable, icon, tittle, index } = this.props;
         return (
-            <div className="title-box" onClick={this.handleColapsable}> <i className={this.props.icon}></i>
-                <span className="title-edit">{this.props.tittle}</span>
-
+            <div className="title-box" onClick={handleCollapsable} index = {index}>
+                <i className={icon}></i>
+                <span className="title-edit">{tittle}</span>
                 <button
                     className="btn-angle btn-fold"> <i className="fas fa-angle-up"></i></button>
                 <button className="btn-angle btn-unfold"> <i className="fas fa-angle-down"></i></button>

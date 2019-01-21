@@ -38,15 +38,15 @@ class BoxFill extends Component {
 
   render() {
     const skills = this.props.backSkills;
-    
+    const {index, handleCollapsable, hideBox} = this.props;    
 
     return (
-      <div class="box-selector edit-fill flex-container">
-        <TittleBox icon="far fa-keyboard icons-edit" tittle="Rellena" />
+      <div className="box-selector edit-fill flex-container">
+        <TittleBox icon="far fa-keyboard icons-edit" tittle="Rellena" handleCollapsable = {handleCollapsable} index = {index}/>
 
-        <form class="fill  bring-box">
-          <div class="contact">
-            <label for="firstName">Nombre completo</label>
+        <form className={`fill bring-box ${hideBox(index)}`}>
+          <div className="contact">
+            <label htmlFor="firstName">Nombre completo</label>
             <input
               placeholder="Ej: Sally Jill"
               id="firstName"
@@ -57,8 +57,8 @@ class BoxFill extends Component {
               value={this.props.dataCard.name}
             />
           </div>
-          <div class="contact">
-            <label for="job">Puesto</label>
+          <div className="contact">
+            <label htmlFor="job">Puesto</label>
             <input
               placeholder="Ej: Front-end unicorn"
               id="job"
@@ -70,9 +70,9 @@ class BoxFill extends Component {
             />
           </div>
           <div className="contact">
-            <label for="image">Imagen de perfil</label>
-            <div class="add_image">
-              <button className="button_ad_image" type="submit" value="submit" onClick={this.fakeClick} >
+            <label htmlFor="image">Imagen de perfil</label>
+            <div className="add_image">
+              <button className="button_ad_image" type="submit" value="submit" onClick={this.fakeClick}>
                 Añadir imagen
               </button>
               <input
@@ -88,8 +88,8 @@ class BoxFill extends Component {
               </div>
             </div>
           </div>
-          <div class="contact">
-            <label for="email">Email</label>
+          <div className="contact">
+            <label htmlFor="email">Email</label>
             <input
               placeholder="Ej: sally-hill@gmail.com"
               id="email"
@@ -100,8 +100,8 @@ class BoxFill extends Component {
               value={this.props.dataCard.email}
             />
           </div>
-          <div class="contact">
-            <label for="phone">Teléfono</label>
+          <div className="contact">
+            <label htmlFor="phone">Teléfono</label>
             <input
               placeholder="Ej: 555-55-55-55"
               id="phone"
@@ -112,8 +112,8 @@ class BoxFill extends Component {
               value={this.props.dataCard.phone}
             />
           </div>
-          <div class="contact">
-            <label for="linkedin">Linkedin</label>
+          <div className="contact">
+            <label htmlFor="linkedin">Linkedin</label>
             <input
               placeholder="Ej: sally.hill"
               id="linkedin"
@@ -124,8 +124,8 @@ class BoxFill extends Component {
               value={this.props.dataCard.linkedin}
             />
           </div>
-          <div class="contact">
-            <label for="github">Github</label>
+          <div className="contact">
+            <label htmlFor="github">Github</label>
             <input
               placeholder="Ej: sally-hill"
               id="github"
@@ -136,8 +136,8 @@ class BoxFill extends Component {
               value={this.props.dataCard.github}
             />
           </div>
-          <seccion className="container-checkSkills">
-            <p class="contact checkbox_contact">Habilidades (máximo 3)</p>
+          <section className="container-checkSkills">
+            <p className="contact checkbox_contact">Habilidades (máximo 3)</p>
             {/* <div class="container-checks check_styles"> */}
               <ul className="check_styles container-checks skillsOptions">
                 {skills.map((skill, index) =>{
@@ -153,7 +153,7 @@ class BoxFill extends Component {
               } )}
             </ul>
           {/* </div> */}
-          </seccion> 
+          </section> 
         </form>
       </div>
     );

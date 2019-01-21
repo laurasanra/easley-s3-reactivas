@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import TittleBox from './TittleBox';
 
 class BoxDesign extends Component {
-    render(){
-        return (
-            <div class="box-selector edit-design flex-container">
 
+<<<<<<< HEAD
             <TittleBox icon="far fa-object-ungroup icons-edit" tittle= "Diseña" />
             
                 <div class="container-hide bring-box">
@@ -17,61 +15,90 @@ class BoxDesign extends Component {
                                 <label for="pallete-blue" class="label-color">
                                     <input id="pallete-blue" type="radio" value="1" name="pallete-colors" onChange={this.props.changePalette}
                                         class="selection-input" checked={this.props.dataCard.pallete === "1"} />
+=======
+    render() {
+        const {index, handleCollapsable, hideBox} = this.props;
+            return (
+            <div className="box-selector edit-design flex-container">
+
+                <TittleBox icon="far fa-object-ungroup icons-edit" tittle="Diseña" handleCollapsable={handleCollapsable} index={index} />
+
+                <div className={`container-hide bring-box ${hideBox(index)}`}>
+                    <div className="selectors-design">
+                        <h2 className="text-color">Colores</h2>
+
+                        <ul className="colors-list">
+                            <li className="list-pallete">
+                                <label htmlFor="pallete-blue" className="label-color">
+                                    <input id="pallete-blue" type="radio" value="1" name="pallete-colors"
+                                        className="selection-input" />
+>>>>>>> collapsables
                                 </label>
-                                <div class="pallet-box">
-                                    <div class="blue-dark-color"></div>
-                                    <div class="blue-midtone-color"></div>
-                                    <div class="blue-ligth-color"></div>
+                                <div className="pallet-box">
+                                    <div className="blue-dark-color"></div>
+                                    <div className="blue-midtone-color"></div>
+                                    <div className="blue-ligth-color"></div>
                                 </div>
                             </li>
+<<<<<<< HEAD
                             <li class="list-pallete">
                                 <label for="pallete-red" class="label-color">
                                     <input id="pallete-red" type="radio" value="2" name="pallete-colors" class="selection-input" onChange={this.props.changePalette} checked={this.props.dataCard.pallete === "2"}
+=======
+                            <li className="list-pallete">
+                                <label htmlFor="pallete-red" className="label-color">
+                                    <input id="pallete-red" type="radio" value="2" name="pallete-colors" className="selection-input"
+>>>>>>> collapsables
                                     />
                                 </label>
-                                <div class="pallet-box">
-                                    <div class="red-dark-color"></div>
-                                    <div class="red-midtone-color"></div>
-                                    <div class="red-ligth-color"></div>
+                                <div className="pallet-box">
+                                    <div className="red-dark-color"></div>
+                                    <div className="red-midtone-color"></div>
+                                    <div className="red-ligth-color"></div>
                                 </div>
                             </li>
-                            <li class="list-pallete">
-                                <label for="pallete-grey" class="label-color">
+                            <li className="list-pallete">
+                                <label htmlFor="pallete-grey" className="label-color">
                                     <input id="pallete-grey" type="radio" value="3" name="pallete-colors"
+<<<<<<< HEAD
                                         class="selection-input" onChange={this.props.changePalette} checked={this.props.dataCard.pallete === "3"}/>
+=======
+                                        className="selection-input" />
+>>>>>>> collapsables
                                 </label>
-                                <div class="pallet-box">
-                                    <div class="grey-dark-color"></div>
-                                    <div class="grey-ligth-color"></div>
-                                    <div class="grey-midtone-color"></div>
+                                <div className="pallet-box">
+                                    <div className="grey-dark-color"></div>
+                                    <div className="grey-ligth-color"></div>
+                                    <div className="grey-midtone-color"></div>
                                 </div>
                             </li>
-                            <li class="list-pallete">
-                                <label for="pallete-gum" class="label-color">
-                                    <input id="pallete-gum" type="radio" value="4" name="pallete-colors" class="selection-input"
-                                    /> <i class="far fa-gem"></i>
-        
+                            <li className="list-pallete">
+                                <label htmlFor="pallete-gum" className="label-color">
+                                    <input id="pallete-gum" type="radio" value="4" name="pallete-colors" className="selection-input"
+                                    /> <i className="far fa-gem"></i>
+
                                 </label>
-                                <div class="pallet-box">
-                                    <div class="blue-gum-color"></div>
-                                    <div class="pink-midtone-color"></div>
-                                    <div class="pink-light-color"></div>
+                                <div className="pallet-box">
+                                    <div className="blue-gum-color"></div>
+                                    <div className="pink-midtone-color"></div>
+                                    <div className="pink-light-color"></div>
                                 </div>
                             </li>
-                            <li class="list-pallete">
-                                <label for="pallete-purple" class="label-color">
+                            <li className="list-pallete">
+                                <label htmlFor="pallete-purple" className="label-color">
                                     <input id="pallete-purple" type="radio" value="5" name="pallete-colors"
-                                        class="selection-input" /> <i class="far fa-gem"></i>
-        
+                                        className="selection-input" /> <i className="far fa-gem"></i>
+
                                 </label>
-                                <div class="pallet-box">
-                                    <div class="purple-midtone-color"></div>
-                                    <div class="purple-dark-color"></div>
-                                    <div class="purple-light-color"></div>
+                                <div className="pallet-box">
+                                    <div className="purple-midtone-color"></div>
+                                    <div className="purple-dark-color"></div>
+                                    <div className="purple-light-color"></div>
                                 </div>
                             </li>
                         </ul>
                     </div>
+<<<<<<< HEAD
         
                     <div class="selectors-font">
                         <h2 class="text-color">Fuentes</h2>
@@ -81,27 +108,52 @@ class BoxDesign extends Component {
                                 <label for="font-ubuntu" class="label-font">
                                     <input id="font-ubuntu" type="radio" value="1" name="select-font" class="selection-input" onChange={this.props.changeTypography}
                                     checked={this.props.dataCard.typography === "1"}/>
+=======
+
+                    <div className="selectors-font">
+                        <h2 className="text-color">Fuentes</h2>
+
+                        <ul className="fonts-list">
+                            <li className="list-font">
+                                <label htmlFor="font-ubuntu" className="label-font">
+                                    <input id="font-ubuntu" type="radio" value="1" name="select-font" className="selection-input"
+                                    />
+>>>>>>> collapsables
                                 </label>
-                                <div class="font-box">
-                                    <div class="select-ubuntu">Ubuntu</div>
+                                <div className="font-box">
+                                    <div className="select-ubuntu">Ubuntu</div>
                                 </div>
                             </li>
+<<<<<<< HEAD
                             <li class="list-font">
                                 <label for="font-comic" class="label-font">
                                     <input id="font-comic" type="radio" value="2" name="select-font" class="selection-input" onChange={this.props.changeTypography}
                                     checked={this.props.dataCard.typography === "2"}/>
+=======
+                            <li className="list-font">
+                                <label htmlFor="font-comic" className="label-font">
+                                    <input id="font-comic" type="radio" value="2" name="select-font" className="selection-input"
+                                    />
+>>>>>>> collapsables
                                 </label>
-                                <div class="font-box">
-                                    <div class="select-comic">Comic Sans</div>
+                                <div className="font-box">
+                                    <div className="select-comic">Comic Sans</div>
                                 </div>
                             </li>
+<<<<<<< HEAD
                             <li class="list-font">
                                 <label for="font-montse" class="label-font">
                                     <input id="font-montse" type="radio" value="3" name="select-font" class="selection-input" onChange={this.props.changeTypography}
                                     checked={this.props.dataCard.typography === "3"}/>
+=======
+                            <li className="list-font">
+                                <label htmlFor="font-montse" className="label-font">
+                                    <input id="font-montse" type="radio" value="3" name="select-font" className="selection-input"
+                                    />
+>>>>>>> collapsables
                                 </label>
-                                <div class="font-box">
-                                    <div class="select-montse">Montserrat</div>
+                                <div className="font-box">
+                                    <div className="select-montse">Montserrat</div>
                                 </div>
                             </li>
                         </ul>
