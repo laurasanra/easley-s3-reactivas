@@ -9,11 +9,11 @@ class BoxDesign extends Component {
             <div className="box-selector edit-design flex-container">
             <TittleBox icon="far fa-object-ungroup icons-edit" tittle="Diseña" handleCollapsable={handleCollapsable} index={index} />
             <div className={`container-hide bring-box ${hideBox(index)}`}>
-            <div class="container-hide bring-box">
-                    <div class="selectors-design">
-                        <h2 class="text-color">Colores</h2>
+            <div className="container-hide bring-box">
+                    <div className="selectors-design">
+                        <h2 className="text-color">Colores</h2>
         
-                        <ul class="colors-list" onChage={this.props.changePalette}>
+                        <ul className="colors-list" onChange={this.props.changePalette}>
                             <li class="list-pallete">
                                 <label for="pallete-blue" class="label-color">
                                     <input id="pallete-blue" type="radio" value="1" name="pallete-colors" onChange={this.props.changePalette}
