@@ -31,6 +31,7 @@ class App extends Component {
     this.changePhone = this.changePhone.bind(this);
     this.changeLinkedin = this.changeLinkedin.bind(this);
     this.changeGithub = this.changeGithub.bind(this);
+    this.changeImage = this.changeImage.bind(this);
   }
 
   getBackSkills() {
@@ -89,6 +90,15 @@ class App extends Component {
     }));
   }
 
+  changeImage(image) {
+    this.setState(prevState => ({
+      dataCard: {
+        ...prevState.dataCard,
+        photo: image
+      }
+    }));
+  }
+
   changeEmail(e) {
     const valueemail = e.target.value;
     console.log(valueemail)
@@ -139,7 +149,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state)
     const changePalette = this.changePallete;
     const changeTypography = this.changeTypography;
     const changeName = this.changeName;
@@ -148,6 +157,7 @@ class App extends Component {
     const changePhone = this.changePhone;
     const changeLinkedin = this.changeLinkedin;
     const changeGithub = this.changeGithub;
+    const changeImage = this.changeImage;
     return (
       <CardGenerator
         dataCard={this.state.dataCard}
@@ -156,6 +166,7 @@ class App extends Component {
         changeTypography={changeTypography}
         changeName={changeName}
         changeJob={changeJob}
+        changeImage={changeImage}
         changeEmail={changeEmail}
         changePhone={changePhone}
         changeLinkedin={changeLinkedin}
