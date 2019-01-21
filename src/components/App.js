@@ -14,7 +14,8 @@ const defaultData = {
   skills: ["HTML", "CSS", "Gulp"],
   success: "",
   cardURL: "",
-  error: ""}
+  error: ""
+}
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class App extends Component {
       dataCard: this.getSavedData(),
       backSkills: [""]
     };
-    
+
     this.getBackSkills();
     this.changePallete = this.changePallete.bind(this);
     this.changeTypography = this.changeTypography.bind(this);
@@ -36,17 +37,17 @@ class App extends Component {
     this.changeImage = this.changeImage.bind(this);
   }
 
-  getSavedData(){
+  getSavedData() {
     const storageData = localStorage.getItem('storageData');
     console.log(storageData)
-    if (!storageData){
+    if (storageData !== null) {
       return JSON.parse(storageData);
     } else {
-      return {...defaultData};
+      return { ...defaultData };
     }
   }
 
-  saveData(data){
+  saveData(data) {
     localStorage.setItem('storageData', JSON.stringify(data))
   }
 
@@ -61,25 +62,32 @@ class App extends Component {
   changePallete(e) {
     const valuePalette = e.target.value;
 
-    this.setState(prevState => ({
-      dataCard: {
+    this.setState(prevState => {
+      const updatedPalette = {
         ...prevState.dataCard,
         pallete: valuePalette
+      };
+      this.saveData(updatedPalette);
+      return {
+        dataCard: updatedPalette
       }
-    }));
+    });
   }
 
   changeTypography(e) {
     const valuetypography = e.target.value;
 
-    this.setState(prevState => ({
-      dataCard: {
+    this.setState(prevState => {
+      const updatedTypo = {
         ...prevState.dataCard,
         typography: valuetypography
+      };
+      this.saveData(updatedTypo);
+      return {
+        dataCard: updatedTypo
       }
-    }));
+    })
   }
-
 
   changeName(e) {
     const valuename = e.target.value;
@@ -93,72 +101,96 @@ class App extends Component {
       return {
         dataCard: updatedName
       }
-      })
+    })
   }
 
   changeJob(e) {
     const valuejob = e.target.value;
 
-    this.setState(prevState => ({
-      dataCard: {
+    this.setState(prevState => {
+      const updatedJob = {
         ...prevState.dataCard,
         job: valuejob
+      };
+      this.saveData(updatedJob);
+      return {
+        dataCard: updatedJob
       }
-    }));
+    })
   }
 
   changeImage(image) {
-    this.setState(prevState => ({
-      dataCard: {
+    this.setState(prevState => {
+      const updatedImg = {
         ...prevState.dataCard,
         photo: image
+      };
+      this.saveData(updatedImg);
+      return {
+        dataCard: updatedImg
       }
-    }));
+    })
   }
 
   changeEmail(e) {
     const valueemail = e.target.value;
 
-    this.setState(prevState => ({
-      dataCard: {
+    this.setState(prevState => {
+      const updatedEmail = {
         ...prevState.dataCard,
         email: valueemail
+      };
+      this.saveData(updatedEmail);
+      return {
+        dataCard: updatedEmail
       }
-    }));
+    })
   }
 
   changePhone(e) {
     const valuephone = e.target.value;
 
-    this.setState(prevState => ({
-      dataCard: {
+    this.setState(prevState => {
+      const updatedPhone = {
         ...prevState.dataCard,
         phone: valuephone
+      };
+      this.saveData(updatedPhone);
+      return {
+        dataCard: updatedPhone
       }
-    }));
+    })
   }
 
   changeLinkedin(e) {
     const valuelinkedin = e.target.value;
 
-    this.setState(prevState => ({
-      dataCard: {
+    this.setState(prevState => {
+      const updatedLinkedin = {
         ...prevState.dataCard,
         linkedin: valuelinkedin
+      };
+      this.saveData(updatedLinkedin);
+      return {
+        dataCard: updatedLinkedin
       }
-    }));
+    })
   }
 
 
   changeGithub(e) {
     const valuegithub = e.target.value;
 
-    this.setState(prevState => ({
-      dataCard: {
+    this.setState(prevState => {
+      const updatedGithub = {
         ...prevState.dataCard,
         github: valuegithub
+      };
+      this.saveData(updatedGithub);
+      return {
+        dataCard: updatedGithub
       }
-    }));
+    })
   }
 
   render() {
