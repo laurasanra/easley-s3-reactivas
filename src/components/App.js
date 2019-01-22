@@ -11,11 +11,11 @@ const defaultData = {
   phone: "",
   linkedin: "",
   github: "",
-  skills: ["HTML", "Gulp"],
+  skills: [],
   success: "",
   cardURL: "",
   error: ""
-}
+};
 
 class App extends Component {
   constructor(props) {
@@ -39,16 +39,16 @@ class App extends Component {
   }
 
   getSavedData() {
-    const storageData = localStorage.getItem('storageData');
+    const storageData = localStorage.getItem("storageData");
     if (storageData !== null) {
       return JSON.parse(storageData);
     } else {
       return { ...defaultData };
     }
   }
-  
+
   saveData(data) {
-    localStorage.setItem('storageData', JSON.stringify(data))
+    localStorage.setItem("storageData", JSON.stringify(data));
   }
 
   getBackSkills() {
@@ -70,7 +70,7 @@ class App extends Component {
       this.saveData(updatedPalette);
       return {
         dataCard: updatedPalette
-      }
+      };
     });
   }
 
@@ -85,50 +85,49 @@ class App extends Component {
       this.saveData(updatedTypo);
       return {
         dataCard: updatedTypo
-      }
-    })
+      };
+    });
   }
 
-changeSkills(e){
-  const selectSkillValue = e.target.value;
-  const selectSkill= e.target;
-  const {skills}=this.state.dataCard;
-  // const removeElement = (array, element) => {
-  //   const index = array.indexOf(element);
-  //   const newArray = [...array]; // destructuring assignment
-  //   if (index >= -1) {
-  //     newArray.splice(index, 1);
-  //   }
-  //   return newArray;
-  // };
+  changeSkills(e) {
+    const selectSkillValue = e.target.value;
+    const selectSkill = e.target;
+    const { skills } = this.state.dataCard;
+    // const removeElement = (array, element) => {
+    //   const index = array.indexOf(element);
+    //   const newArray = [...array]; // destructuring assignment
+    //   if (index >= -1) {
+    //     newArray.splice(index, 1);
+    //   }
+    //   return newArray;
+    // };
 
-    if(selectSkill.checked){
+    console.log(selectSkill.checked)
+
+    if (selectSkill.checked) {
       this.setState(prevState => {
-         const updateSkills ={
+        const updateSkills = {
           ...prevState.dataCard,
-          skills: [...prevState.dataCard.skills,selectSkillValue]
-         } 
-         this.saveData(updateSkills);
-         return {
+          skills: [...prevState.dataCard.skills, selectSkillValue]
+        };
+        this.saveData(updateSkills);
+        return {
           dataCard: updateSkills
-        }
-      }
-      //   ({
-      //   dataCard: {
-      //     ...prevState.dataCard,
-      //     skills: [...prevState.dataCard.skills,selectSkillValue]
-      //   }
-      // })
-    ); 
-}else{
-      
-    }
-     
-  
-    
-    
-    console.log(skills)
-}
+        };
+      });
+    } else {
+      const removedSkills = skills.filter(skill=>skill !== selectSkillValue)
+      this.setState(prevState => {
+        const updateSkills = {
+          ...prevState.dataCard,
+          skills: removedSkills
+        };
+        this.saveData(updateSkills);
+        return {
+          dataCard: updateSkills
+        };
+    })}
+  }
 
   changeName(e) {
     const valuename = e.target.value;
@@ -141,8 +140,8 @@ changeSkills(e){
       this.saveData(updatedName);
       return {
         dataCard: updatedName
-      }
-    })
+      };
+    });
   }
 
   changeJob(e) {
@@ -156,8 +155,8 @@ changeSkills(e){
       this.saveData(updatedJob);
       return {
         dataCard: updatedJob
-      }
-    })
+      };
+    });
   }
 
   changeImage(image) {
@@ -169,8 +168,8 @@ changeSkills(e){
       this.saveData(updatedImg);
       return {
         dataCard: updatedImg
-      }
-    })
+      };
+    });
   }
 
   changeEmail(e) {
@@ -184,8 +183,8 @@ changeSkills(e){
       this.saveData(updatedEmail);
       return {
         dataCard: updatedEmail
-      }
-    })
+      };
+    });
   }
 
   changePhone(e) {
@@ -199,8 +198,8 @@ changeSkills(e){
       this.saveData(updatedPhone);
       return {
         dataCard: updatedPhone
-      }
-    })
+      };
+    });
   }
 
   changeLinkedin(e) {
@@ -214,10 +213,9 @@ changeSkills(e){
       this.saveData(updatedLinkedin);
       return {
         dataCard: updatedLinkedin
-      }
-    })
+      };
+    });
   }
-
 
   changeGithub(e) {
     const valuegithub = e.target.value;
@@ -230,8 +228,8 @@ changeSkills(e){
       this.saveData(updatedGithub);
       return {
         dataCard: updatedGithub
-      }
-    })
+      };
+    });
   }
 
   render() {
