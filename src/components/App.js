@@ -93,18 +93,8 @@ class App extends Component {
     const selectSkillValue = e.target.value;
     const selectSkill = e.target;
     const { skills } = this.state.dataCard;
-    // const removeElement = (array, element) => {
-    //   const index = array.indexOf(element);
-    //   const newArray = [...array]; // destructuring assignment
-    //   if (index >= -1) {
-    //     newArray.splice(index, 1);
-    //   }
-    //   return newArray;
-    // };
-
-    console.log(selectSkill.checked)
-
-    if (selectSkill.checked) {
+  
+    if (selectSkill.checked && skills.length<3) {
       this.setState(prevState => {
         const updateSkills = {
           ...prevState.dataCard,
