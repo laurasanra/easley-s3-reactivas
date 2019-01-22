@@ -15,9 +15,9 @@ class BoxDesign extends Component {
         
                         <ul className="colors-list" onChange={this.props.changePalette}>
                             <li class="list-pallete">
-                                <label for="pallete-blue" class="label-color">
+                                <label htmlFor="pallete-blue" className="label-color">
                                     <input id="pallete-blue" type="radio" value="1" name="pallete-colors" onChange={this.props.changePalette}
-                                        class="selection-input" checked={this.props.dataCard.pallete === "1"} />
+                                        className="selection-input" checked={this.props.dataCard.pallete === "1"} />
 
                                    </label>
                                 <div className="pallet-box">
@@ -26,9 +26,9 @@ class BoxDesign extends Component {
                                     <div className="blue-ligth-color"></div>
                                 </div>
                             </li>
-                            <li class="list-pallete">
-                                <label for="pallete-red" class="label-color">
-                                    <input id="pallete-red" type="radio" value="2" name="pallete-colors" class="selection-input" onChange={this.props.changePalette} checked={this.props.dataCard.pallete === "2"}
+                            <li className="list-pallete">
+                                <label htmlFor="pallete-red" className="label-color">
+                                    <input id="pallete-red" type="radio" value="2" name="pallete-colors" className="selection-input" onChange={this.props.changePalette} checked={this.props.dataCard.pallete === "2"}
                                     />
                                 </label>
                                 <div className="pallet-box">
@@ -40,7 +40,7 @@ class BoxDesign extends Component {
                             <li className="list-pallete">
                                 <label htmlFor="pallete-grey" className="label-color">
                                     <input id="pallete-grey" type="radio" value="3" name="pallete-colors"
-                                        class="selection-input" onChange={this.props.changePalette} checked={this.props.dataCard.pallete === "3"}/>
+                                        className="selection-input" onChange={this.props.changePalette} checked={this.props.dataCard.pallete === "3"}/>
                                 </label>
                                 <div className="pallet-box">
                                     <div className="grey-dark-color"></div>
@@ -75,22 +75,22 @@ class BoxDesign extends Component {
                         </ul>
                     </div>
         
-                    <div class="selectors-font">
-                        <h2 class="text-color">Fuentes</h2>
+                    <div className="selectors-font">
+                        <h2 className="text-color">Fuentes</h2>
         
-                        <ul class="fonts-list">
-                            <li class="list-font">
-                                <label for="font-ubuntu" class="label-font">
-                                    <input id="font-ubuntu" type="radio" value="1" name="select-font" class="selection-input" onChange={this.props.changeTypography}
+                        <ul className="fonts-list">
+                            <li className="list-font">
+                                <label htmlFor="font-ubuntu" className="label-font">
+                                    <input id="font-ubuntu" type="radio" value="1" name="select-font" className="selection-input" onChange={this.props.changeTypography}
                                     checked={this.props.dataCard.typography === "1"}/>
                                 </label>
                                 <div className="font-box">
                                     <div className="select-ubuntu">Ubuntu</div>
                                 </div>
                             </li>
-                            <li class="list-font">
-                                <label for="font-comic" class="label-font">
-                                    <input id="font-comic" type="radio" value="2" name="select-font" class="selection-input" onChange={this.props.changeTypography}
+                            <li className="list-font">
+                                <label htmlFor="font-comic" className="label-font">
+                                    <input id="font-comic" type="radio" value="2" name="select-font" className="selection-input" onChange={this.props.changeTypography}
                                     checked={this.props.dataCard.typography === "2"}/>
                                 </label>
                                 <div className="font-box">
@@ -98,8 +98,8 @@ class BoxDesign extends Component {
                                 </div>
                             </li>
                             <li class="list-font">
-                                <label for="font-montse" class="label-font">
-                                    <input id="font-montse" type="radio" value="3" name="select-font" class="selection-input" onChange={this.props.changeTypography}
+                                <label for="font-montse" className="label-font">
+                                    <input id="font-montse" type="radio" value="3" name="select-font" className="selection-input" onChange={this.props.changeTypography}
                                     checked={this.props.dataCard.typography === "3"}/>
                                 </label>
                                 <div className="font-box">
