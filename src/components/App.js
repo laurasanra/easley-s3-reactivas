@@ -89,13 +89,10 @@ class App extends Component {
     })
   }
 
-<<<<<<< HEAD
-=======
 changeSkills(){
   console.log(this.state.skills)
 }
 
->>>>>>> 89a950d526fe09c8c8ab5ab6e25eb375a5bbe3cd
   changeName(e) {
     const valuename = e.target.value;
 
@@ -210,12 +207,8 @@ changeSkills(){
     const changeLinkedin = this.changeLinkedin;
     const changeGithub = this.changeGithub;
     const changeImage = this.changeImage;
-<<<<<<< HEAD
-    
-=======
     const changeSkills = this.changeSkills;
 
->>>>>>> 89a950d526fe09c8c8ab5ab6e25eb375a5bbe3cd
     return (
       <CardGenerator
         dataCard={this.state.dataCard}
