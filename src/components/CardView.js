@@ -29,7 +29,7 @@ class CardView extends Component {
 
         return ( 
         <div className="build-card">
-            <Reset dataCard={this.props.dataCard}/>
+            <Reset />
             <div className={`box-card ${this.changePalette()}`}>
                 <CardViewHeader dataCard={this.props.dataCard}/>
                 <CardViewImg dataCard={this.props.dataCard}/>
