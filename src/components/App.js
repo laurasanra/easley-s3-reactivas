@@ -11,7 +11,7 @@ const defaultData = {
   phone: "",
   linkedin: "",
   github: "",
-  skills: ["HTML", "CSS", "Gulp"],
+  skills: ["HTML", "Gulp"],
   success: "",
   cardURL: "",
   error: ""
@@ -90,21 +90,44 @@ class App extends Component {
   }
 
 changeSkills(e){
-  const selectSkill = e.target.value;
-  
+  const selectSkillValue = e.target.value;
+  const selectSkill= e.target;
+  const {skills}=this.state.dataCard;
+  // const removeElement = (array, element) => {
+  //   const index = array.indexOf(element);
+  //   const newArray = [...array]; // destructuring assignment
+  //   if (index >= -1) {
+  //     newArray.splice(index, 1);
+  //   }
+  //   return newArray;
+  // };
 
-  if (this.state.dataCard.skills.length <3){
-
-    this.setState(prevState => ({
-      dataCard: {
-        ...prevState.dataCard,
-        skills: [...prevState.dataCard.skills]
+    if(selectSkill.checked){
+      this.setState(prevState => {
+         const updateSkills ={
+          ...prevState.dataCard,
+          skills: [...prevState.dataCard.skills,selectSkillValue]
+         } 
+         this.saveData(updateSkills);
+         return {
+          dataCard: updateSkills
+        }
       }
-    })); 
-  } 
+      //   ({
+      //   dataCard: {
+      //     ...prevState.dataCard,
+      //     skills: [...prevState.dataCard.skills,selectSkillValue]
+      //   }
+      // })
+    ); 
+}else{
+      
+    }
+     
+  
     
     
-    console.log(selectSkill)
+    console.log(skills)
 }
 
   changeName(e) {

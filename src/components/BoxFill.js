@@ -145,7 +145,8 @@ class BoxFill extends Component {
                               type="checkbox" 
                               value={skill} 
                               name="" 
-                              onChange={this.props.changeSkills}/>
+                              onChange={this.props.changeSkills}
+                              checked={this.props.dataCard.skills.includes(`${skill}`)}/>
                       {skill}
                     </label>
                   </div>
