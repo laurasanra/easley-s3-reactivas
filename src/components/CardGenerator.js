@@ -13,8 +13,19 @@ class CardGenerator extends Component {
           <Header container="builder-logo" imgClass="img-logo-builder" />
         </div>
         <section className="build-container">
-          <CardView dataCard={this.props.dataCard} />
-          <Selector dataCard={this.props.dataCard} backSkills={this.props.backSkills} changePalette={this.props.changePalette} changeTypography={this.props.changeTypography} changeName={this.props.changeName} changeJob={this.props.changeJob} changeEmail={this.props.changeEmail} changePhone={this.props.changePhone} changeLinkedin={this.props.changeLinkedin} changeGithub={this.props.changeGithub} changeImage={this.props.changeImage}/>
+          <CardView dataCard={this.props.dataCard}/>
+          <Selector dataCard={this.props.dataCard} 
+                    backSkills={this.props.backSkills} 
+                    changePalette={this.props.changePalette} 
+                    changeTypography={this.props.changeTypography} 
+                    changeName={this.props.changeName} 
+                    changeJob={this.props.changeJob} 
+                    changeEmail={this.props.changeEmail} 
+                    changePhone={this.props.changePhone} 
+                    changeLinkedin={this.props.changeLinkedin} 
+                    changeGithub={this.props.changeGithub} 
+                    changeImage={this.props.changeImage}
+                    changeSkills={this.props.changeSkills}/>
         </section>
         <Footer />
       </div>

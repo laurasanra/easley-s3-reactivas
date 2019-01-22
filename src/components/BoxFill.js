@@ -140,12 +140,15 @@ class BoxFill extends Component {
                 return (
                   <div className="check_styles" key={index}>
                     <label htmlFor={skill}>
-                      <input className="skill-Box-Check" id={skill} type="checkbox" value={skill} name="" />
+                      <input className="skill-Box-Check" 
+                              id={skill} 
+                              type="checkbox" 
+                              value={skill} 
+                              name="" />
                       {skill}
                     </label>
                   </div>
                 )
-
               })}
             </ul>
           </section> 
