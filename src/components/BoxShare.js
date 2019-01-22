@@ -11,7 +11,7 @@ class BoxShare extends Component {
 
           <div className= {`card-share flex-container ${hideBox(index)}`}>
             <div className="box-btn-share">
-              <button className="btn-share" type="submit">
+              <button className="btn-share" type="submit" onClick={this.props.sendRequest}>
                 {" "}
                 <i className="far fa-id-card" />
                 <span className="title-edit"> Crear tarjeta </span>
@@ -24,7 +24,7 @@ class BoxShare extends Component {
           <div className="card-msg">
             <p className="msg-text">La tarjeta ha sido creada:</p>
 
-            <p className="share-link" href="#">
+            <p className="share-link" href={this.props.URL}>
               <span className="link" />
             </p>
             <button className="btn-twitter">

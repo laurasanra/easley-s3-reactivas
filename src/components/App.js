@@ -22,7 +22,8 @@ class App extends Component {
     super(props);
     this.state = {
       dataCard: this.getSavedData(),
-      backSkills: [""]
+      backSkills: [""],
+      URL:"",
     };
 
     this.getBackSkills();
@@ -36,6 +37,7 @@ class App extends Component {
     this.changeGithub = this.changeGithub.bind(this);
     this.changeImage = this.changeImage.bind(this);
     this.changeSkills = this.changeSkills.bind(this);
+    this.sendRequest=this.sendRequest.bind(this);
   }
 
   getSavedData() {
@@ -222,6 +224,45 @@ class App extends Component {
     });
   }
 
+  sendRequest(){
+    
+    const dataCard= this.state.dataCard;
+    fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
+    method: 'POST',
+    body: JSON.stringify(dataCard),
+    headers: {
+      'content-type': 'application/json'
+    },
+  })
+    .then(resp => resp.json())
+    .then(resultURL => this.showURL(resultURL))
+    //   showURL(resultURL);
+    //   btnShare.classList.remove("btn-share--disabled");
+    // })
+    .catch(error => console.log(error))
+  }
+
+  showURL(resultURL){
+   
+    if(resultURL.success){
+      this.setState({URL:resultURL.cardURL})
+      console.log(this.state.URL)
+      
+
+      // twitterLinkElement.innerHTML = '<a class="twitter_link" href=' + resultURL.cardURL + '>' + resultURL.cardURL + '</a>';
+      // twitterAnchor.href = `https://twitter.com/intent/tweet?text=${result.cardURL}`;
+    }else{
+      //twitterLinkElement.innerHTML = 'ERROR:' + result.error;
+ 
+    }
+  };
+
+  // sendData() {
+  //   btnShare.classList.add("btn-share--disabled");
+  //   cardCreated.classList.remove("hide-box");
+  //   sendRequest(dataCard);
+  // }
+
   render() {
     const changePalette = this.changePallete;
     const changeTypography = this.changeTypography;
@@ -248,6 +289,8 @@ class App extends Component {
         changeLinkedin={changeLinkedin}
         changeGithub={changeGithub}
         changeSkills={changeSkills}
+        sendRequest={this.sendRequest}
+        
       />
     );
   }
