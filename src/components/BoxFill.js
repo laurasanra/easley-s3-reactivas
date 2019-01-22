@@ -144,7 +144,8 @@ class BoxFill extends Component {
                               id={skill} 
                               type="checkbox" 
                               value={skill} 
-                              name="" />
+                              name="" 
+                              onChange={this.props.changeSkills}/>
                       {skill}
                     </label>
                   </div>

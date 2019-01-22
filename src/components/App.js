@@ -66,8 +66,22 @@ class App extends Component {
     }));
   }
 
-changeSkills(){
-  console.log(this.state.skills)
+changeSkills(e){
+  const selectSkill = e.target.value;
+  
+
+  if (this.state.dataCard.skills.length <3){
+
+    this.setState(prevState => ({
+      dataCard: {
+        ...prevState.dataCard,
+        skills: [...prevState.dataCard.skills]
+      }
+    })); 
+  } 
+    
+    
+    console.log(selectSkill)
 }
 
   changeName(e) {
