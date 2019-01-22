@@ -26,7 +26,8 @@ class CardGenerator extends Component {
                     changeGithub={this.props.changeGithub} 
                     changeImage={this.props.changeImage}
                     changeSkills={this.props.changeSkills}
-                    sendRequest={this.props.sendRequest}/>
+                    sendRequest={this.props.sendRequest}
+                    URL={this.props.URL}/>
         </section>
         <Footer />
       </div>

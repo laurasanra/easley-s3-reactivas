@@ -290,6 +290,7 @@ class App extends Component {
         changeGithub={changeGithub}
         changeSkills={changeSkills}
         sendRequest={this.sendRequest}
+        URL={this.state.URL}
         
       />
     );

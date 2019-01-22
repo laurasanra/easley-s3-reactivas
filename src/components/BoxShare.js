@@ -2,6 +2,13 @@ import React, { Component } from "react";
 import TittleBox from "./TittleBox";
 
 class BoxShare extends Component {
+
+  showShare(){
+    if(this.props.URL===""){
+      return "hide-box"
+    }else{return}
+  }
+
   render() {
     const {index, handleCollapsable, hideBox} = this.props;
     return (
@@ -20,7 +27,7 @@ class BoxShare extends Component {
           </div>
         </div>
 
-        <div className="edit-share card-created hide-box bring-box">
+        <div className={`edit-share card-created ${this.showShare()} bring-box`}>
           <div className="card-msg">
             <p className="msg-text">La tarjeta ha sido creada:</p>
 
@@ -30,7 +37,7 @@ class BoxShare extends Component {
             <button className="btn-twitter">
               {" "}
               <i className="fab fa-twitter" />
-              <a className="twitter-link" target="_blank" href="">
+              <a className="twitter-link" target="_blank" href={this.props.URL}>
                 Compartir en twitter
               </a>
             </button>
