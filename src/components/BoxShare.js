@@ -37,7 +37,7 @@ class BoxShare extends Component {
             <button className="btn-twitter">
               {" "}
               <i className="fab fa-twitter" />
-              <a className="twitter-link" target="_blank" href={this.props.URL}>
+              <a className="twitter-link" target="_blank" href={`https://twitter.com/intent/tweet?text=¡Mira%20qué%20tarjeta%20más%20chula%20he%20creado%20con%20Awesome%20profile-cards!%20${this.props.URL}`}>
                 Compartir en twitter
               </a>
             </button>
