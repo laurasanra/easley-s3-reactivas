@@ -98,7 +98,7 @@ class BoxDesign extends Component {
                                 </div>
                             </li>
                             <li className="list-font">
-                                <label for="font-montse" className="label-font">
+                                <label htmlFor="font-montse" className="label-font">
                                     <input id="font-montse" type="radio" value="3" name="select-font" className="selection-input" onChange={this.props.changeTypography}
                                     checked={this.props.dataCard.typography === "3"}/>
                                 </label>

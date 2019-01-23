@@ -236,9 +236,6 @@ class App extends Component {
   })
     .then(resp => resp.json())
     .then(resultURL => this.showURL(resultURL))
-    //   showURL(resultURL);
-    //   btnShare.classList.remove("btn-share--disabled");
-    // })
     .catch(error => console.log(error))
   }
 
@@ -247,21 +244,10 @@ class App extends Component {
     if(resultURL.success){
       this.setState({URL:resultURL.cardURL})
       console.log(this.state.URL)
-      
-
-      // twitterLinkElement.innerHTML = '<a class="twitter_link" href=' + resultURL.cardURL + '>' + resultURL.cardURL + '</a>';
-      // twitterAnchor.href = `https://twitter.com/intent/tweet?text=${result.cardURL}`;
     }else{
-      //twitterLinkElement.innerHTML = 'ERROR:' + result.error;
- 
+    
     }
   };
-
-  // sendData() {
-  //   btnShare.classList.add("btn-share--disabled");
-  //   cardCreated.classList.remove("hide-box");
-  //   sendRequest(dataCard);
-  // }
 
   render() {
     const changePalette = this.changePallete;
