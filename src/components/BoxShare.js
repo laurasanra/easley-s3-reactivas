@@ -32,7 +32,8 @@ class BoxShare extends Component {
             <p className="msg-text">La tarjeta ha sido creada:</p>
 
             <p className="share-link" href={this.props.URL}>
-              <span className="link" />
+              <span className="link"><a target="_blank" href={this.props.URL}>{this.props.URL}</a></span>
+
             </p>
             <button className="btn-twitter">
               {" "}
