@@ -14,7 +14,7 @@ class BoxDesign extends Component {
                         <h2 className="text-color">Colores</h2>
         
                         <ul className="colors-list" onChange={this.props.changePalette}>
-                            <li class="list-pallete">
+                            <li className="list-pallete">
                                 <label htmlFor="pallete-blue" className="label-color">
                                     <input id="pallete-blue" type="radio" value="1" name="pallete-colors" onChange={this.props.changePalette}
                                         className="selection-input" checked={this.props.dataCard.pallete === "1"} />
@@ -97,7 +97,7 @@ class BoxDesign extends Component {
                                     <div className="select-comic">Comic Sans</div>
                                 </div>
                             </li>
-                            <li class="list-font">
+                            <li className="list-font">
                                 <label for="font-montse" className="label-font">
                                     <input id="font-montse" type="radio" value="3" name="select-font" className="selection-input" onChange={this.props.changeTypography}
                                     checked={this.props.dataCard.typography === "3"}/>
