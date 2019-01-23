@@ -69,8 +69,13 @@
   font-family: $font-default;
 }
 
+.linkBtn{
+  text-decoration: none;
+}
 .btn-start {
   font-family: $font-default;
+  font-size: 16px;
+  text-decoration: none;
   font-weight: 600; /*pone 600 pero lo veo muy gordo*/
   display: flex;
   flex-direction: column;

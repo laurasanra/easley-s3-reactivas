@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom';
 import CardGenerator from "./CardGenerator";
+import Home from "./Home";
 
 const defaultData = {
   pallete: "1",
@@ -211,20 +212,40 @@ changeSkills(){
     const changeSkills = this.changeSkills;
 
     return (
-      <CardGenerator
-        dataCard={this.state.dataCard}
-        backSkills={this.state.backSkills}
-        changePalette={changePalette}
-        changeTypography={changeTypography}
-        changeName={changeName}
-        changeJob={changeJob}
-        changeImage={changeImage}
-        changeEmail={changeEmail}
-        changePhone={changePhone}
-        changeLinkedin={changeLinkedin}
-        changeGithub={changeGithub}
-        changeSkills={changeSkills}
-      />
+
+      <Switch>
+        <Route 
+          exact
+          path='/'
+          render={
+              props=> (
+                <Home />
+              )
+          }
+        />
+        <Route 
+          path='/cardgenerator'
+          render={
+            props=> (
+              <CardGenerator
+                  dataCard={this.state.dataCard}
+                  backSkills={this.state.backSkills}
+                  changePalette={changePalette}
+                  changeTypography={changeTypography}
+                  changeName={changeName}
+                  changeJob={changeJob}
+                  changeImage={changeImage}
+                  changeEmail={changeEmail}
+                  changePhone={changePhone}
+                  changeLinkedin={changeLinkedin}
+                  changeGithub={changeGithub}
+                  changeSkills={changeSkills}
+              />
+            )
+          }
+        />
+      
+      </Switch>
     );
   }
 }
