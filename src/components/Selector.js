@@ -56,6 +56,8 @@ class Selector extends Component {
         />
 
         <BoxShare
+          URL={this.props.URL}
+          sendRequest={this.props.sendRequest}
           dataCard={this.props.dataCard}
           index="3"
           handleCollapsable={this.handleCollapsable}

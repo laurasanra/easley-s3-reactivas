@@ -13,18 +13,19 @@ const defaultData = {
   phone: "",
   linkedin: "",
   github: "",
-  skills: ["HTML", "CSS", "Gulp"],
+  skills: [],
   success: "",
   cardURL: "",
   error: ""
-}
+};
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       dataCard: this.getSavedData(),
-      backSkills: [""]
+      backSkills: [""],
+      URL:"",
     };
 
     this.getBackSkills();
@@ -38,19 +39,20 @@ class App extends Component {
     this.changeGithub = this.changeGithub.bind(this);
     this.changeImage = this.changeImage.bind(this);
     this.changeSkills = this.changeSkills.bind(this);
+    this.sendRequest=this.sendRequest.bind(this);
   }
 
   getSavedData() {
-    const storageData = localStorage.getItem('storageData');
+    const storageData = localStorage.getItem("storageData");
     if (storageData !== null) {
       return JSON.parse(storageData);
     } else {
       return { ...defaultData };
     }
   }
-  
+
   saveData(data) {
-    localStorage.setItem('storageData', JSON.stringify(data))
+    localStorage.setItem("storageData", JSON.stringify(data));
   }
 
   getBackSkills() {
@@ -72,7 +74,7 @@ class App extends Component {
       this.saveData(updatedPalette);
       return {
         dataCard: updatedPalette
-      }
+      };
     });
   }
 
@@ -87,13 +89,39 @@ class App extends Component {
       this.saveData(updatedTypo);
       return {
         dataCard: updatedTypo
-      }
-    })
+      };
+    });
   }
 
-changeSkills(){
-  console.log(this.state.skills)
-}
+  changeSkills(e) {
+    const selectSkillValue = e.target.value;
+    const selectSkill = e.target;
+    const { skills } = this.state.dataCard;
+  
+    if (selectSkill.checked && skills.length<3) {
+      this.setState(prevState => {
+        const updateSkills = {
+          ...prevState.dataCard,
+          skills: [...prevState.dataCard.skills, selectSkillValue]
+        };
+        this.saveData(updateSkills);
+        return {
+          dataCard: updateSkills
+        };
+      });
+    } else {
+      const removedSkills = skills.filter(skill=>skill !== selectSkillValue)
+      this.setState(prevState => {
+        const updateSkills = {
+          ...prevState.dataCard,
+          skills: removedSkills
+        };
+        this.saveData(updateSkills);
+        return {
+          dataCard: updateSkills
+        };
+    })}
+  }
 
   changeName(e) {
     const valuename = e.target.value;
@@ -106,8 +134,8 @@ changeSkills(){
       this.saveData(updatedName);
       return {
         dataCard: updatedName
-      }
-    })
+      };
+    });
   }
 
   changeJob(e) {
@@ -121,8 +149,8 @@ changeSkills(){
       this.saveData(updatedJob);
       return {
         dataCard: updatedJob
-      }
-    })
+      };
+    });
   }
 
   changeImage(image) {
@@ -134,8 +162,8 @@ changeSkills(){
       this.saveData(updatedImg);
       return {
         dataCard: updatedImg
-      }
-    })
+      };
+    });
   }
 
   changeEmail(e) {
@@ -149,8 +177,8 @@ changeSkills(){
       this.saveData(updatedEmail);
       return {
         dataCard: updatedEmail
-      }
-    })
+      };
+    });
   }
 
   changePhone(e) {
@@ -164,8 +192,8 @@ changeSkills(){
       this.saveData(updatedPhone);
       return {
         dataCard: updatedPhone
-      }
-    })
+      };
+    });
   }
 
   changeLinkedin(e) {
@@ -179,10 +207,9 @@ changeSkills(){
       this.saveData(updatedLinkedin);
       return {
         dataCard: updatedLinkedin
-      }
-    })
+      };
+    });
   }
-
 
   changeGithub(e) {
     const valuegithub = e.target.value;
@@ -195,9 +222,48 @@ changeSkills(){
       this.saveData(updatedGithub);
       return {
         dataCard: updatedGithub
-      }
-    })
+      };
+    });
   }
+
+  sendRequest(){
+    
+    const dataCard= this.state.dataCard;
+    fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
+    method: 'POST',
+    body: JSON.stringify(dataCard),
+    headers: {
+      'content-type': 'application/json'
+    },
+  })
+    .then(resp => resp.json())
+    .then(resultURL => this.showURL(resultURL))
+    //   showURL(resultURL);
+    //   btnShare.classList.remove("btn-share--disabled");
+    // })
+    .catch(error => console.log(error))
+  }
+
+  showURL(resultURL){
+   
+    if(resultURL.success){
+      this.setState({URL:resultURL.cardURL})
+      console.log(this.state.URL)
+      
+
+      // twitterLinkElement.innerHTML = '<a class="twitter_link" href=' + resultURL.cardURL + '>' + resultURL.cardURL + '</a>';
+      // twitterAnchor.href = `https://twitter.com/intent/tweet?text=${result.cardURL}`;
+    }else{
+      //twitterLinkElement.innerHTML = 'ERROR:' + result.error;
+ 
+    }
+  };
+
+  // sendData() {
+  //   btnShare.classList.add("btn-share--disabled");
+  //   cardCreated.classList.remove("hide-box");
+  //   sendRequest(dataCard);
+  // }
 
   render() {
     const changePalette = this.changePallete;
@@ -240,6 +306,8 @@ changeSkills(){
                   changeLinkedin={changeLinkedin}
                   changeGithub={changeGithub}
                   changeSkills={changeSkills}
+                  sendRequest={this.sendRequest}
+                  URL={this.state.URL}
               />
             )
           }
