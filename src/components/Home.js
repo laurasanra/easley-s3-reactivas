@@ -9,7 +9,7 @@ class Home extends Component {
     render() {
         return (
             <Fragment>
-            <Header />
+            <Header logo="container-logo"/>
             <main className="page__main">
                 <div className="container-text">
                     <h1 className="main-title">Crea tu tarjeta de visita</h1>

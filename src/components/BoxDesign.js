@@ -19,7 +19,7 @@ class BoxDesign extends Component {
                                     <input id="pallete-blue" type="radio" value="1" name="pallete-colors" onChange={this.props.changePalette}
                                         className="selection-input" checked={this.props.dataCard.pallete === "1"} />
 
-                                   </label>
+                                </label>
                                 <div className="pallet-box">
                                     <div className="blue-dark-color"></div>
                                     <div className="blue-midtone-color"></div>
