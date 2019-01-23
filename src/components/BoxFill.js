@@ -71,8 +71,8 @@ class BoxFill extends Component {
             />
           </div>
           <div className="contact">
-            <label for="image">Imagen de perfil</label>
-            <div class="add_image">
+            <label htmlFor="image">Imagen de perfil</label>
+            <div className="add_image">
               <button className="button_ad_image" type="button" value="submit" onClick={this.fakeClick} >
                 Añadir imagen
               </button>
