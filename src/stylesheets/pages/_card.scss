@@ -12,7 +12,6 @@ body {
   border: 1px solid $color-silver;
   width: 100%;
   padding-bottom: 30px;
-  // background-image: linear-gradient(to bottom, $color-silver, $color-pale-grey);
   background: linear-gradient(-75deg, $palette-blue-gum, $palette-pink-light-gum, $palette-pink-cocktail-color, $palette-yello-sand-color,$palette-blue-water-color);
   background-size: 800%;
   animation: grad cubic-bezier(0.785, 0.135, 0.15, 0.86) 15s infinite;
@@ -180,7 +179,7 @@ body {
   width: 240px;
   height: 200px;
   background-color: $palette-blue-ligth;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-image: url("../images/tiger.png");
 }
@@ -231,7 +230,7 @@ body {
   font-size: 13px;
   display: flex;
 }
-c
+
 .skills__item {
   justify-content: center;
   align-items: center;
@@ -621,28 +620,6 @@ c
 
 /*-----Classes for the card when selecting each palette----*/
 
-
-/* gum pallete*/
-/*
-.purple-midtone-color {
-    width: 30px;
-    height: 25px;
-    background-color: $palette-purple-midtone-color;
-}
-
-.purple-dark-color {
-    width: 30px;
-    height: 25px;
-    background-color: $palette-purple-dark-color;
-}
-
-.purple-light-color {
-    width: 30px;
-    height: 25px;
-    background-color: $palette-purple-light-color;
-}
-
-*/
 .color-purple {
     .card-img {
         background-image: url("../images/panter7.png");
@@ -723,7 +700,7 @@ c
 .color-grey {
     .card-img {
        background-image: url("../images/cocodrilo2.png");
-        background-position: center;    
+       background-position: top;   
     }
     .card-header {
         border-left: 3px solid $palette-grey-dark;

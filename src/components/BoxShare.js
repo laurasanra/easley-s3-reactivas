@@ -6,7 +6,7 @@ class BoxShare extends Component {
   showShare(){
     if(this.props.URL===""){
       return "hide-box"
-    }else{return}
+    }else{return ""}
   }
 
   render() {
