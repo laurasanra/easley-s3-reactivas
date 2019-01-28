@@ -7,8 +7,8 @@ import logoAwesome from "../images/awesome-card-logo.svg";
 class Header extends Component {
     render(){
         return(
-        <header className= {`page__header ${this.props.logo}`} >
-                <div className={this.props.container}>
+        <header className= "page__header" >
+                <div className={this.props.logo}>
                     <Link className="linkBtn" to="/">
                     <img className={this.props.imgClass} src={logoAwesome} alt="Awesome Cards Logo" />
                     </Link>
