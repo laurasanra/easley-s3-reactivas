@@ -13,7 +13,7 @@ class CardGenerator extends Component {
           <Header container="builder-logo" imgClass="img-logo-builder" />
         </div>
         <section className="build-container">
-          <CardView dataCard={this.props.dataCard}/>
+          <CardView dataCard={this.props.dataCard} resetInfo={this.props.resetInfo}/>
           <Selector dataCard={this.props.dataCard} 
                     backSkills={this.props.backSkills} 
                     changePalette={this.props.changePalette} 

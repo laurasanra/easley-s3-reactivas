@@ -7,11 +7,14 @@ class Reset extends Component {
     this.handleReset = this.handleReset.bind(this);
   }
 
-  handleReset(){
+  handleReset(event){
+    event.preventDefault();
     localStorage.removeItem('storageData');
+    this.props.resetInfo();
   }
   
   render() {
+    
      return (
       <div className="reset-box">
         <a href="/" className="reset-link" onClick={this.handleReset}>

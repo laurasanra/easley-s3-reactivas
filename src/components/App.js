@@ -40,6 +40,11 @@ class App extends Component {
     this.changeImage = this.changeImage.bind(this);
     this.changeSkills = this.changeSkills.bind(this);
     this.sendRequest=this.sendRequest.bind(this);
+    this.resetInfo=this.resetInfo.bind(this);
+  }
+
+  resetInfo(){
+    this.setState({ dataCard: this.getSavedData() })
   }
 
   getSavedData() {
@@ -294,6 +299,7 @@ class App extends Component {
                   changeSkills={changeSkills}
                   sendRequest={this.sendRequest}
                   URL={this.state.URL}
+                  resetInfo={this.resetInfo}
               />
             )
           }
