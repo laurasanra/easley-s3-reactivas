@@ -11,7 +11,7 @@ body {
 .build-card {
   border: 1px solid $color-silver;
   width: 100%;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   background: linear-gradient(-75deg, $palette-blue-gum, $palette-pink-light-gum, $palette-pink-cocktail-color, $palette-yello-sand-color,$palette-blue-water-color);
   background-size: 800%;
   animation: grad cubic-bezier(0.785, 0.135, 0.15, 0.86) 15s infinite;
@@ -744,14 +744,14 @@ body {
   .build-container {
     display: flex;
     flex-direction: row-reverse;
-    padding: 20px 40px 20px 20px;
+    margin: 20px 40px 20px 20px;
     justify-content: center;
-  }
+    }
 
   .build-card {
     width: 329px;
     border-radius: 6px;
-    padding-bottom: 222px;
+    min-height: 812px;
   }
 
   .box-selector {
@@ -767,6 +767,7 @@ body {
 @media all and (min-width:1024px) {
   .build-card {
     width: 585px;
+    margin-bottom: 60px;
   }
 }
 

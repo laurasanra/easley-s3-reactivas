@@ -10,7 +10,7 @@ class CardGenerator extends Component {
     return (
       <div className="page">
         <div className="box-logo-builder">
-          <Header container="builder-logo" imgClass="img-logo-builder" />
+          <Header logo="builder-logo" imgClass="img-logo-builder" />
         </div>
         <section className="build-container">
           <CardView dataCard={this.props.dataCard} resetInfo={this.props.resetInfo}/>

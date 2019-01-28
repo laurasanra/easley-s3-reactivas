@@ -19,7 +19,7 @@ class Header extends Component {
 }
 
 Header.propTypes={
-    container: PropTypes.string.isRequired,
+    logo: PropTypes.string.isRequired,
     imgClass: PropTypes.string.isRequired,
 }
 
