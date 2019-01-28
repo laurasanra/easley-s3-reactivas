@@ -2,7 +2,7 @@ import React, { Fragment, Component } from 'react';
 import {Link} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-
+import "./Home.scss";
 
 class Home extends Component {
 
