@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TittleBox from "./TittleBox";
+import PropTypes from "prop-types";
 
 class BoxShare extends Component {
 
@@ -48,6 +49,15 @@ class BoxShare extends Component {
       </div>
     );
   }
+}
+
+BoxShare.propTypes = {
+  dataCard: PropTypes.object.isRequired,
+  handleCollapsable: PropTypes.func.isRequired,
+  hideBox: PropTypes.func.isRequired,
+  URL: PropTypes.string.isRequired,
+  sendRequest: PropTypes.func.isRequired,
+  index: PropTypes.string.isRequired
 }
 
 export default BoxShare;

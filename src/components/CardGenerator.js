@@ -13,26 +13,47 @@ class CardGenerator extends Component {
           <Header logo="builder-logo" imgClass="img-logo-builder" />
         </div>
         <section className="build-container">
-          <CardView dataCard={this.props.dataCard} resetInfo={this.props.resetInfo}/>
-          <Selector dataCard={this.props.dataCard} 
-                    backSkills={this.props.backSkills} 
-                    changePalette={this.props.changePalette} 
-                    changeTypography={this.props.changeTypography} 
-                    changeName={this.props.changeName} 
-                    changeJob={this.props.changeJob} 
-                    changeEmail={this.props.changeEmail} 
-                    changePhone={this.props.changePhone} 
-                    changeLinkedin={this.props.changeLinkedin} 
-                    changeGithub={this.props.changeGithub} 
-                    changeImage={this.props.changeImage}
-                    changeSkills={this.props.changeSkills}
-                    sendRequest={this.props.sendRequest}
-                    URL={this.props.URL}/>
+          <CardView 
+          dataCard={this.props.dataCard} 
+          resetInfo={this.props.resetInfo} />
+          <Selector dataCard={this.props.dataCard}
+            backSkills={this.props.backSkills}
+            changePalette={this.props.changePalette}
+            changeTypography={this.props.changeTypography}
+            changeName={this.props.changeName}
+            changeJob={this.props.changeJob}
+            changeEmail={this.props.changeEmail}
+            changePhone={this.props.changePhone}
+            changeLinkedin={this.props.changeLinkedin}
+            changeGithub={this.props.changeGithub}
+            changeImage={this.props.changeImage}
+            changeSkills={this.props.changeSkills}
+            sendRequest={this.props.sendRequest}
+            URL={this.props.URL} />
         </section>
         <Footer />
       </div>
     );
   }
+}
+
+CardGenerator.propTypes = {
+  dataCard: PropTypes.object.isRequired,
+  backSkills: PropTypes.array.isRequired,
+  changePalette: PropTypes.func.isRequired,
+  changeTypography: PropTypes.func.isRequired,
+  changeName: PropTypes.func.isRequired,
+  changeJob: PropTypes.func.isRequired,
+  changeImage: PropTypes.func.isRequired,
+  changeEmail: PropTypes.func.isRequired,
+  changePhone: PropTypes.func.isRequired,
+  changeLinkedin: PropTypes.func.isRequired,
+  changeGithub: PropTypes.func.isRequired,
+  changeSkills: PropTypes.func.isRequired,
+  sendRequest: PropTypes.func.isRequired,
+  URL: PropTypes.string.isRequired,
+  resetInfo: PropTypes.func.isRequired
+
 }
 
 export default CardGenerator;

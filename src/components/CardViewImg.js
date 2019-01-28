@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DefaultImg from "../images/cebra1.png";
+import PropTypes from "prop-types";
 
 class CardViewImg extends Component {
     render() {

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TittleBox from "./TittleBox";
 import "./BoxFill.scss";
+import PropTypes from "prop-types";
 
 const fr = new FileReader();
 
@@ -40,12 +41,12 @@ class BoxFill extends Component {
 
   render() {
     const skills = this.props.backSkills;
-    const {index, handleCollapsable, hideBox} = this.props;    
+    const { index, handleCollapsable, hideBox } = this.props;
     const hideBoxResult = hideBox(index);
 
     return (
       <div className="box-selector edit-fill flex-container">
-        <TittleBox icon="far fa-keyboard icons-edit" tittle="Rellena" handleCollapsable = {handleCollapsable} index = {index} hideBoxResult={hideBoxResult}/>
+        <TittleBox icon="far fa-keyboard icons-edit" tittle="Rellena" handleCollapsable={handleCollapsable} index={index} hideBoxResult={hideBoxResult} />
 
         <form className={`fill bring-box ${hideBoxResult}`}>
           <div className="contact">
@@ -140,24 +141,41 @@ class BoxFill extends Component {
                 return (
                   <div className="check_styles" key={index}>
                     <label htmlFor={skill}>
-                      <input className="skill-Box-Check" 
-                              id={skill} 
-                              type="checkbox" 
-                              value={skill} 
-                              name="" 
-                              onChange={this.props.changeSkills}
-                              checked={this.props.dataCard.skills.includes(`${skill}`)}/>
+                      <input className="skill-Box-Check"
+                        id={skill}
+                        type="checkbox"
+                        value={skill}
+                        name=""
+                        onChange={this.props.changeSkills}
+                        checked={this.props.dataCard.skills.includes(`${skill}`)} />
                       {skill}
                     </label>
                   </div>
                 )
               })}
             </ul>
-          </section> 
+          </section>
         </form>
       </div>
     );
   }
+}
+
+
+BoxFill.propTypes = {
+  dataCard: PropTypes.object.isRequired,
+  handleCollapsable: PropTypes.func.isRequired,
+  hideBox: PropTypes.func.isRequired,
+  backSkills: PropTypes.array.isRequired,
+  changeName: PropTypes.func.isRequired,
+  changeJob: PropTypes.func.isRequired,
+  changeEmail: PropTypes.func.isRequired,
+  changePhone: PropTypes.func.isRequired,
+  changeLinkedin: PropTypes.func.isRequired,
+  changeGithub: PropTypes.func.isRequired,
+  changeImage: PropTypes.func.isRequired,
+  changeSkills: PropTypes.func.isRequired,
+  index: PropTypes.string.isRequired
 }
 
 export default BoxFill;
