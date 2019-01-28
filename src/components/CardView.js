@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 
 class CardView extends Component {
 
-    changePalette() {
+    changeColor() {
         const incomingColor = this.props.dataCard.pallete;
         let selectedColor = "";
         if (incomingColor === "1") {
@@ -30,7 +30,7 @@ class CardView extends Component {
         return (
             <div className="build-card">
                 <Reset resetInfo={this.props.resetInfo} />
-                <div className={`box-card ${this.changePalette()}`}>
+                <div className={`box-card ${this.changeColor()}`}>
                     <CardViewHeader dataCard={this.props.dataCard} />
                     <CardViewImg dataCard={this.props.dataCard} />
                     <CardViewSocial dataCard={this.props.dataCard} />

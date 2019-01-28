@@ -155,6 +155,7 @@ body {
     margin: 20px 0 10px;
     padding-left: 20px;
     border-left: 3px solid $palette-blue-ligth;
+    color: $palette-blue-dark;
     font-family: $comic;
     height: 42px;
     line-height: 1.1;
@@ -674,7 +675,7 @@ body {
         background-position: top;
     }
     .card-header {
-        border-left: 3px solid $palette-red-dark;
+        border-left: 3px solid $palette-red-ligth;
     }
     .name-person {
         color: $palette-red-dark;
@@ -696,7 +697,7 @@ body {
         background-position: top;
     }
     .card-header {
-        border-left: 3px solid $palette-grey-dark;
+        border-left: 3px solid $palette-grey-midtone;
     }
     .name-person {
         color: $palette-grey-dark;
