@@ -32,4 +32,8 @@ class CardViewFooter extends Component {
     }
 }
 
+CardViewFooter.propTypes = {
+    dataCard: PropTypes.object.isRequired
+}
+
 export default CardViewFooter;

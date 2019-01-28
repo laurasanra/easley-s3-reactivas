@@ -29,4 +29,8 @@ class CardViewHeader extends Component {
   }
 }
 
+CardViewHeader.propTypes = {
+  dataCard: PropTypes.object.isRequired
+}
+
 export default CardViewHeader;

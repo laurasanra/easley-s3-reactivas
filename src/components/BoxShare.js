@@ -16,7 +16,12 @@ class BoxShare extends Component {
     return (
       <div>
         <div className="box-selector edit-share">
-          <TittleBox icon="fas fa-share-alt icons-edit" tittle="Comparte" handleCollapsable = {handleCollapsable} index = {index} hideBoxResult={hideBoxResult}/>
+          <TittleBox 
+          icon="fas fa-share-alt icons-edit" 
+          tittle="Comparte" 
+          handleCollapsable = {handleCollapsable} 
+          index = {index} 
+          hideBoxResult={hideBoxResult}/>
 
           <div className= {`card-share flex-container ${hideBoxResult}`}>
             <div className="box-btn-share">

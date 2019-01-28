@@ -26,5 +26,8 @@ class CardViewImg extends Component {
     }
 }
 
+CardViewImg.propTypes = {
+    dataCard: PropTypes.object.isRequired
+}
 
 export default CardViewImg;

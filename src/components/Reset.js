@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class Reset extends Component {
   constructor(props){
@@ -25,6 +26,10 @@ class Reset extends Component {
       </div>
     );
   }
+}
+
+Reset.propTypes = {
+  resetInfo: PropTypes.func.isRequired
 }
 
 export default Reset;

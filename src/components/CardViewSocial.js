@@ -36,4 +36,8 @@ class CardViewSocial extends Component {
   }
 }
 
+CardViewSocial.propTypes = {
+  dataCard: PropTypes.object.isRequired
+}
+
 export default CardViewSocial;

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BoxDesign from "./BoxDesign";
 import BoxFill from "./BoxFill";
 import BoxShare from "./BoxShare";
+import PropTypes from "prop-types";
 
 class Selector extends Component {
   constructor(props) {
@@ -66,6 +67,23 @@ class Selector extends Component {
       </div>
     );
   }
+}
+
+Selector.propTypes = {
+  dataCard: PropTypes.object.isRequired,
+  backSkills: PropTypes.array.isRequired,
+  changePalette: PropTypes.func.isRequired,
+  changeTypography: PropTypes.func.isRequired,
+  changeName: PropTypes.func.isRequired,
+  changeJob: PropTypes.func.isRequired,
+  changeEmail: PropTypes.func.isRequired,
+  changePhone: PropTypes.func.isRequired,
+  changeLinkedin: PropTypes.func.isRequired,
+  changeGithub: PropTypes.func.isRequired,
+  changeImage: PropTypes.func.isRequired,
+  changeSkills: PropTypes.func.isRequired,
+  sendRequest: PropTypes.func.isRequired,
+  URL: PropTypes.string.isRequired,
 }
 
 export default Selector;
