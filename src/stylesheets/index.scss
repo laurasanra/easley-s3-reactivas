@@ -1,6 +1,8 @@
 @import 'core/variables';
 @import 'components/typography';
 @import 'pages/card';
+
+
 *{  
     box-sizing: border-box;
 }
@@ -27,11 +29,6 @@ body {
     background-color: $color-ligth;
 }
 
-/*-----------HEADER landing------------*/ 
-@import 'layout/header';
-
-/*-----------FOOTER landing------------*/ 
-@import 'layout/footer';
 
 /*-----------Home /main section landing------------*/ 
 
