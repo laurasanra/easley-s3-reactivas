@@ -78,6 +78,7 @@ class BoxFill extends Component {
                 Añadir imagen
               </button>
               <input
+                
                 type="file"
                 name="addImage"
                 id="img-selector"
@@ -85,8 +86,10 @@ class BoxFill extends Component {
                 ref={this.fileInput}
                 onChange={this.handleFileChange}></input>
 
-              <div className="preview-box">
-                <img className="preview-img" src={this.props.dataCard.photo} alt={this.state.fileName} />
+              <div className="preview-box" style={{
+        backgroundImage: `url(${this.props.dataCard.photo})`
+        }}>
+              
               </div>
             </div>
           </div>

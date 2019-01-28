@@ -152,14 +152,14 @@ body {
 }
 
 .btn__hidden {
-    display: none !important;
-}
+   display: none;
+   }
 
 .card-img {
     width: 240px;
     height: 200px;
     background-color: $palette-blue-ligth;
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-image: url("../images/tiger.png");
 }
@@ -564,7 +564,7 @@ body {
 .color-purple {
     .card-img {
         background-image: url("../images/panter7.png");
-        background-position: top;
+        background-position: center;
     }
     .card-header {
         border-left: 3px solid $palette-purple-light-color;
@@ -592,7 +592,7 @@ body {
 .color-gum {
     .card-img {
         background-image: url("../images/cat2.png");
-        background-position: top;
+        background-position: center;
     }
     .card-header {
         border-left: 3px solid $palette-blue-gum;
@@ -620,7 +620,7 @@ body {
 .color-red {
     .card-img {
         background-image: url("../images/cebra5.png");
-        background-position: top;
+        background-position: center;
     }
     .card-header {
         border-left: 3px solid $palette-red-ligth;
@@ -642,7 +642,7 @@ body {
 .color-grey {
     .card-img {
         background-image: url("../images/cocodrilo2.png");
-        background-position: top;
+        background-position: center;
     }
     .card-header {
         border-left: 3px solid $palette-grey-midtone;
@@ -715,13 +715,6 @@ body {
     margin-right: 0;
 }
 
-.contact input {
-    display: block;
-    margin-top: 6px;
-    @media all and (min-width: 768px) {
-        width: 300px;
-    }
-}
 
 input {
     padding-bottom: 6px;
@@ -758,16 +751,14 @@ input {
     flex-direction: row;
 }
 
-.preview-img {
-    max-width: 30px;
-    max-height: 30px;
-}
 
 .preview-box {
     width: 30px;
     height: 30px;
     border: 1px solid $palette-blue-ligth;
     margin-top: 6px;
+    background-position: center;
+    background-size: cover;
 }
 
 .checkbox_contact {
