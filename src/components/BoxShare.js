@@ -10,8 +10,6 @@ class BoxShare extends Component {
     }else{return ""}
     }
   
-
-
   render() {
     const {index, handleCollapsable, hideBox, sendRequest} = this.props;
     const hideBoxResult = hideBox(index);
