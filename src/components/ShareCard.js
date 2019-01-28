@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class ShareCard extends Component {
     
@@ -31,5 +32,9 @@ class ShareCard extends Component {
     );
 }
 }
+
+ShareCard.propTypes = {
+    URL: PropTypes.string.isRequired
+  }
 
 export default ShareCard;
