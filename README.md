@@ -1,4 +1,4 @@
-##Legacy Code Project 
+## Legacy Code Project 
 
 In this project we work on a [Vanilla JavaScript App](https://github.com/Adalab/easley-s2-Las-Pegatinas), to be converted to a  React SPA.
 
