@@ -4,26 +4,26 @@ import PropTypes from "prop-types";
 import ShareCard from "./ShareCard";
 
 class BoxShare extends Component {
-  showShare(){
-    if(this.props.URL===""){
-        return "hide-box"
-    }else{return ""}
-    }
-  
+  showShare() {
+    if (this.props.URL === "") {
+      return "hide-box"
+    } else { return "" }
+  }
+
   render() {
-    const {index, handleCollapsable, hideBox, sendRequest} = this.props;
+    const { index, handleCollapsable, hideBox, sendRequest } = this.props;
     const hideBoxResult = hideBox(index);
     return (
       <div>
         <div className="box-selector edit-share">
-          <TittleBox 
-          icon="fas fa-share-alt icons-edit" 
-          tittle="Comparte" 
-          handleCollapsable = {handleCollapsable} 
-          index = {index} 
-          hideBoxResult={hideBoxResult}/>
+          <TittleBox
+            icon="fas fa-share-alt icons-edit"
+            tittle="Comparte"
+            handleCollapsable={handleCollapsable}
+            index={index}
+            hideBoxResult={hideBoxResult} />
 
-          <div className= {`card-share flex-container ${hideBoxResult}`}>
+          <div className={`card-share flex-container ${hideBoxResult}`}>
             <div className="box-btn-share">
               <button className="btn-share" type="submit" onClick={sendRequest}>
                 {" "}
@@ -31,14 +31,15 @@ class BoxShare extends Component {
                 <span className="title-edit"> Crear tarjeta </span>
               </button>
             </div>
+            <div className={`edit-share card-created ${this.showShare()} 
+        bring-box`}>
+          <ShareCard URL={this.props.URL} />
+
+        </div>
           </div>
         </div>
 
-        <div className={`edit-share card-created ${this.showShare()} 
-        bring-box`}> 
-        <ShareCard URL={this.props.URL} />
         
-        </div>
       </div>
     );
   }
