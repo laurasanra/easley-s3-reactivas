@@ -69,9 +69,13 @@
   font-family: $font-default;
 }
 
+.linkBtn{
+  text-decoration: none;
+}
 .btn-start {
   font-family: $font-default;
   font-size: 16px;
+  text-decoration: none;
   font-weight: 600; /*pone 600 pero lo veo muy gordo*/
   display: flex;
   flex-direction: column;
@@ -88,7 +92,6 @@
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
-
 }
 
 @media all and (min-width: 768px) {
@@ -134,9 +137,5 @@
   .btn-start {
     margin-top: 39px;
     margin-bottom: 30px;
-  }
-
-  .page__footer {
-    position: absolute;
   }
 }

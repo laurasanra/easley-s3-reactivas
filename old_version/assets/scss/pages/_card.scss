@@ -828,14 +828,6 @@ body {
 }
 
 
-input {
-  padding-bottom: 6px;
-  padding-left: 9px;
-  padding-top: 4px;
-  border: 1px solid $palette-blue-ligth;
-  outline-style: none;
-  width: 281px;
-}
 
 ::placeholder {
   color: $color-pinkish-grey;
@@ -882,6 +874,7 @@ input {
 }
 
 .check_styles {
+  list-style: none;
   font-family: $open;
   font-size: 14px;
   line-height: 20px;
