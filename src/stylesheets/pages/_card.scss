@@ -104,83 +104,8 @@ body {
     }
 }
 
-.reset-box {
-    width: 240px;
-    margin: 0 auto;
-    background-color: transparent;
-    a {
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-    i {
-        background-color: transparent;
-        padding-right: 5px;
-    }
-}
-
-.reset-btn {
-    width: 75px;
-    height: 30px;
-    margin: 10px 0 20px;
-    padding: 5px 10px;
-    border: 1px solid $color-ligth;
-    border-radius: 15px;
-    color: $color-secondary;
-    background-color: transparent;
-    font-family: $open;
-    font-size: 12px;
-}
-
-.btn__hidden {
-    display: none;
-}
-
-/*unfolds*/
-
 .build-container {
     background-image: linear-gradient(to bottom, $color-back, $color-ligth);
-}
-
-.selectors-container {
-    padding: 27px 20px;
-    background-image: linear-gradient(to bottom, $color-back, $color-ligth);
-}
-
-.box-selector {
-    display: flex;
-    border-bottom: 1px solid $color-midtone;
-    margin-bottom: 10px;
-    padding-bottom: 7px;
-    align-items: center;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.title-box {
-    display: flex;
-    width: 100%;
-    align-items: center;
-}
-
-.title-edit {
-    margin-left: 10px;
-    font-family: $font-default;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-.btn-angle {
-    border: none;
-    background: none;
-    width: 16px;
-    height: 18px;
-    margin-left: auto;
-    transform: scale(2.5);
-    color: $color-secondary;
-    -webkit-text-stroke: .1rem $color-back;
 }
 
 .btn-fold {
@@ -456,53 +381,8 @@ body {
     background-color: $color-btn-disabled;
 }
 
-.card-msg {
-    font-family: $open;
-    font-size: 18px;
-    font-weight: 600;
-    color: $color-secondary; // padding: 20px 0 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.msg-text {
-    padding: 20px 0 5px;
-}
-
-.share-link {
-    text-decoration: none;
-}
-
-.link {
-    font-size: 12px;
-    color: $color-primary;
-}
-
-.btn-twitter {
-    color: $color-ligth;
-    background-color: $color-twitter;
-    width: 181px;
-    height: 30px;
-    border-radius: 3px;
-    margin: 10px 0 30px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-}
-
-.twitter-link {
-    color: $color-ligth;
-    margin-left: 10px;
-    font-family: $font-default;
-    font-size: 14px;
-    text-decoration: none;
-}
-
 //media queries
 @media all and (min-width:768px) {
-    .reset-box {
-        padding-top: 163px;
-    }
     .build-container {
         display: flex;
         flex-direction: row-reverse;
@@ -518,28 +398,6 @@ body {
     }
 }
 
-//Rellena
-.fill {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
-    margin-bottom: 30px;
-    padding: 0;
-}
-
-.contact {
-    font-family: $open;
-    font-size: 14px;
-    line-height: 20px;
-    color: $palette-blue-dark;
-    max-width: 280px;
-    margin-bottom: 20px;
-    margin-left: 0;
-    margin-right: 0;
-}
-
 input {
     padding-bottom: 6px;
     padding-left: 9px;
@@ -553,54 +411,6 @@ input {
     color: $color-pinkish-grey;
 }
 
-.button_ad_image {
-    display: inline-block;
-    height: 30px;
-    width: 140px;
-    color: $color-ligth;
-    background-color: $color-primary;
-    margin-right: 30px;
-    margin-top: 6px;
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    font-family: $open;
-    font-size: 14px;
-    line-height: 20px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-}
-
-.add_image {
-    display: flex;
-    flex-direction: row;
-}
-
-.preview-box {
-    width: 30px;
-    height: 30px;
-    border: 1px solid $palette-blue-ligth;
-    margin-top: 6px;
-    background-position: center;
-    background-size: cover;
-}
-
-.checkbox_contact {
-    margin-bottom: 10px;
-    margin-top: 20px;
-}
-
-.check_styles {
-    font-family: $open;
-    font-size: 14px;
-    line-height: 20px;
-    color: $palette-blue-dark;
-    margin-bottom: 11px;
-}
-
 .checkbox_input {
     max-width: 27px;
-}
-
-.hide-box {
-    display: none;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./Reset.scss";
 
 class Reset extends Component {
   constructor(props){
@@ -18,7 +19,7 @@ class Reset extends Component {
     
      return (
       <div className="reset-box">
-        <a href="/" className="reset-link" onClick={this.handleReset}>
+        <a href="/" onClick={this.handleReset}>
           <div className="reset-btn">
             <i className="far fa-trash-alt" /> reset
           </div>

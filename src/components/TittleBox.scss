@@ -1,0 +1,26 @@
+@import '../stylesheets/components/typography';
+@import '../stylesheets/core/variables';
+
+.title-box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.title-edit {
+    margin-left: 10px;
+    font-family: $font-default;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.btn-angle {
+    border: none;
+    background: none;
+    width: 16px;
+    height: 18px;
+    margin-left: auto;
+    transform: scale(2.5);
+    color: $color-secondary;
+    -webkit-text-stroke: .1rem $color-back;
+}

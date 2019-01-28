@@ -3,6 +3,7 @@ import BoxDesign from "./BoxDesign";
 import BoxFill from "./BoxFill";
 import BoxShare from "./BoxShare";
 import PropTypes from "prop-types";
+import "./Selector.scss";
 
 class Selector extends Component {
   constructor(props) {

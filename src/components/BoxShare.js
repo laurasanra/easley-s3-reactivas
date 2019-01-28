@@ -32,8 +32,7 @@ class BoxShare extends Component {
                 <span className="title-edit"> Crear tarjeta </span>
               </button>
             </div>
-            <div className={`edit-share card-created ${this.showShare()} 
-        bring-box`}>
+            <div className={`edit-share card-created ${this.showShare()}`}>
           <ShareCard URL={this.props.URL} />
 
         </div>

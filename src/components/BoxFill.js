@@ -45,10 +45,10 @@ class BoxFill extends Component {
     const hideBoxResult = hideBox(index);
 
     return (
-      <div className="box-selector edit-fill flex-container">
+      <div className="box-selector flex-container">
         <TittleBox icon="far fa-keyboard icons-edit" tittle="Rellena" handleCollapsable={handleCollapsable} index={index} hideBoxResult={hideBoxResult} />
 
-        <form className={`fill bring-box ${hideBoxResult}`}>
+        <form className={`fill ${hideBoxResult}`}>
           <div className="contact">
             <label htmlFor="firstName">Nombre completo</label>
             <input
@@ -78,7 +78,7 @@ class BoxFill extends Component {
                 Añadir imagen
               </button>
               <input
-                
+
                 type="file"
                 name="addImage"
                 id="img-selector"
@@ -87,9 +87,9 @@ class BoxFill extends Component {
                 onChange={this.handleFileChange}></input>
 
               <div className="preview-box" style={{
-        backgroundImage: `url(${this.props.dataCard.photo})`
-        }}>
-              
+                backgroundImage: `url(${this.props.dataCard.photo})`
+              }}>
+
               </div>
             </div>
           </div>
@@ -137,9 +137,9 @@ class BoxFill extends Component {
               value={this.props.dataCard.github}
             />
           </div>
-          <section className="container-checkSkills">
+          <section>
             <p className="contact checkbox_contact">Habilidades (máximo 3)</p>
-            <ul className="check_styles container-checks skillsOptions">
+            <ul className="check_styles skillsOptions">
               {skills.map((skill, index) => {
                 return (
                   <div className="check_styles" key={index}>
@@ -163,7 +163,6 @@ class BoxFill extends Component {
     );
   }
 }
-
 
 BoxFill.propTypes = {
   dataCard: PropTypes.object.isRequired,
