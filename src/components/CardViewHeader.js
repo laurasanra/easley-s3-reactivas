@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./CardViewHeader.scss";
 
 class CardViewHeader extends Component {
 
@@ -15,7 +16,6 @@ class CardViewHeader extends Component {
     }
     return selectedFont;
   }
-
 
   render() {
       const dataCard = this.props.dataCard;

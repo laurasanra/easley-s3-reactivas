@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
+import "./CardViewFooter.scss";
 
 const defaultSkills = ['HTML', 'CSS', 'GULP'];
 

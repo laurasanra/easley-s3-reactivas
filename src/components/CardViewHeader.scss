@@ -1,0 +1,35 @@
+@import '../stylesheets/components/typography';
+@import '../stylesheets/core/variables';
+
+.card-header {
+    margin: 20px 0 10px;
+    padding-left: 20px;
+    border-left: 3px solid $palette-blue-ligth;
+    color: $palette-blue-dark;
+    font-family: $comic;
+    height: 42px;
+    line-height: 1.1;
+}
+
+.name-person {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.work-space {
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-secondary;
+}
+
+.font-ubuntu {
+    font-family: $ubuntu;
+}
+
+.font-comic {
+    font-family: $comic;
+}
+
+.font-montse {
+    font-family: $montse;
+}

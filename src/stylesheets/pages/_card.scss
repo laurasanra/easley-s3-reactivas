@@ -151,29 +151,8 @@ body {
     background-color: $color-ligth;
 }
 
-.card-header {
-    margin: 20px 0 10px;
-    padding-left: 20px;
-    border-left: 3px solid $palette-blue-ligth;
-    color: $palette-blue-dark;
-    font-family: $comic;
-    height: 42px;
-    line-height: 1.1;
-}
-
 .btn__hidden {
     display: none !important;
-}
-
-.name-person {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.work-space {
-    font-size: 16px;
-    font-weight: 400;
-    color: $color-secondary;
 }
 
 .card-img {
@@ -217,35 +196,6 @@ body {
     }
 }
 
-.card-footer {
-    border-top: 2px solid rgba($palette-blue-midtone, 0.2);
-    padding-left: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.skills__list {
-    color: $color-ligth;
-    list-style: none;
-    font-family: $open;
-    font-size: 13px;
-    display: flex;
-}
-
-.skills__item {
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    text-transform: uppercase;
-    border-radius: 4px;
-}
-
-.skills__item--bg {
-    background-color: $palette-blue-midtone;
-}
-
 /*unfolds*/
 
 .build-container {
@@ -264,7 +214,6 @@ body {
     padding-bottom: 7px;
     align-items: center;
 }
-
 
 .flex-container {
     display: flex;
@@ -710,20 +659,6 @@ body {
     .skills__item {
         background-color: $palette-grey-ligth;
     }
-}
-
-/*-----Classes for the card when selecting each font-family----*/
-
-.font-ubuntu {
-    font-family: $ubuntu;
-}
-
-.font-comic {
-    font-family: $comic;
-}
-
-.font-montse {
-    font-family: $montse;
 }
 
 //media queries
