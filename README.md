@@ -14,9 +14,9 @@ In the project directory, you can run `npm start`. Open [http://localhost:3000](
 
 
 ### Details 🛠️
-Styled using (SASS)[https://www.npmjs.com/package/node-sass], includes [React-Router](https://reacttraining.com/react-router/) and [PropTypes](https://www.npmjs.com/package/prop-types).
+Styled using [SASS](https://www.npmjs.com/package/node-sass), includes [React-Router](https://reacttraining.com/react-router/) and [PropTypes](https://www.npmjs.com/package/prop-types).
 
 #### Who we are 🎉
 
-We developed this project during our time as (adalabers)[https://adalab.es/].
+We developed this project during our time as [adalabers](https://adalab.es/).
 
