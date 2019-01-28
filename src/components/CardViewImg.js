@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import DefaultImg from "../images/cebra1.png";
 import PropTypes from "prop-types";
 import "./CardViewImg.scss";
 
@@ -9,15 +8,11 @@ class CardViewImg extends Component {
         const Img = {
         backgroundImage: `url(${dataCardPhoto})`
         }
-        const defaultImg = {
-        backgroundImage: `url(${DefaultImg})`
-        }
         if(dataCardPhoto === ""){
-            return(<div className="card-img" id="random" style={defaultImg}>
+            return(<div className="card-img" id="random">
             </div>)
             
         }else{
-
             return (
                 <div className="card-img" id="random" style={Img}>
                 </div>

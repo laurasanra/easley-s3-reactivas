@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import ShareCard from "./ShareCard";
 
 class BoxShare extends Component {
+
   showShare() {
     if (this.props.URL === "") {
       return "hide-box"

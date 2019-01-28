@@ -5,6 +5,7 @@ import CardViewSocial from './CardViewSocial';
 import CardViewFooter from './CardViewFooter';
 import Reset from './Reset';
 import PropTypes from "prop-types";
+import "./CardView.scss";
 
 class CardView extends Component {
 

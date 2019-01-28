@@ -1,0 +1,137 @@
+@import '../stylesheets/components/typography';
+@import '../stylesheets/core/variables';
+
+.build-card {
+    border: 1px solid $color-silver;
+    min-height: 457px;
+    width: 100%;
+    margin-bottom: 30px;
+    background: linear-gradient(-75deg, $palette-blue-gum, $palette-pink-light-gum, $palette-pink-cocktail-color, $palette-yello-sand-color, $palette-blue-water-color);
+    background-size: 800%;
+    animation: grad cubic-bezier(0.785, 0.135, 0.15, 0.86) 15s infinite;
+}
+
+@media all and (min-width:768px){
+    .build-card {
+        width: 329px;
+        border-radius: 6px;
+        min-height: 810px;
+    }
+}
+
+@media all and (min-width:1024px) {
+    .build-card {
+        width: 585px;
+        margin-bottom: 60px;
+    }
+}
+
+.box-card {
+    border: 1px solid $color-silver;
+    border-radius: 2px;
+    width: 240px;
+    height: 367px;
+    margin: 0 auto;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+    background-color: $color-ligth;
+}
+
+.color-red {
+    .card-img {
+        background-image: url("../images/cebra5.png");
+        background-position: center;
+    }
+    .card-header {
+        border-left: 3px solid $palette-red-ligth;
+    }
+    .name-person {
+        color: $palette-red-dark;
+    }
+    .icons-contein {
+        border: 2px solid $palette-red-ligth;
+    }
+    .icons-card {
+        color: $palette-red-dark;
+    }
+    .skills__item {
+        background-color: $palette-red-midtone;
+    }
+}
+
+.color-grey {
+    .card-img {
+        background-image: url("../images/cocodrilo2.png");
+        background-position: center;
+    }
+    .card-header {
+        border-left: 3px solid $palette-grey-midtone;
+    }
+    .name-person {
+        color: $palette-grey-dark;
+    }
+    .icons-contein {
+        border: 2px solid $palette-grey-midtone;
+    }
+    .icons-card {
+        color: $palette-grey-dark;
+    }
+    .skills__item {
+        background-color: $palette-grey-ligth;
+    }
+}
+
+.color-purple {
+    .card-img {
+        background-image: url("../images/panter7.png");
+        background-position: center;
+    }
+    .card-header {
+        border-left: 3px solid $palette-purple-light-color;
+    }
+    .name-person {
+        color: $palette-purple-dark-color;
+    }
+    .work-space {
+        color: $palette-purple-midtone-color;
+    }
+    .icons-contein {
+        border: 2px solid $palette-purple-light-color;
+    }
+    .icons-card {
+        color: $palette-purple-light-color;
+    }
+    .skills__item {
+        background-color: $palette-purple-dark-color;
+    }
+    .card-footer {
+        border-top: 2px solid $palette-purple-midtone-color;
+    }
+}
+
+.color-gum {
+    .card-img {
+        background-image: url("../images/cat2.png");
+        background-position: center;
+    }
+    .card-header {
+        border-left: 3px solid $palette-blue-gum;
+    }
+    .name-person {
+        color: $palette-pink-dark-gum;
+    }
+    .work-space {
+        color: $palette-pink-light-gum;
+    }
+    .icons-contein {
+        border: 2px solid $palette-pink-dark-gum;
+    }
+    .icons-card {
+        color: $palette-pink-light-gum;
+    }
+    .skills__item {
+        background-color: $palette-blue-gum;
+    }
+    .card-footer {
+        border-top: 2px solid $palette-blue-gum;
+    }
+}

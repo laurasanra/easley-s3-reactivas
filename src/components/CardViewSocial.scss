@@ -1,3 +1,33 @@
 @import '../stylesheets/components/typography';
 @import '../stylesheets/core/variables';
 
+
+.icons-box {
+    padding: 10px 20px;
+}
+
+.list-icon-card {
+    list-style: none;
+    display: flex;
+}
+
+.icons-contein {
+    width: 32px;
+    height: 32px;
+    border: 2px solid $palette-blue-ligth;
+    border-radius: 50%;
+    font-size: 18px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icons-card {
+        color: $palette-blue-dark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    
+}
