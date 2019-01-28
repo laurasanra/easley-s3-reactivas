@@ -1,17 +1,19 @@
 import React, { Component } from "react";
 import TittleBox from "./TittleBox";
 import PropTypes from "prop-types";
+import ShareCard from "./ShareCard";
 
 class BoxShare extends Component {
-
   showShare(){
     if(this.props.URL===""){
-      return "hide-box"
+        return "hide-box"
     }else{return ""}
-  }
+    }
+  
+
 
   render() {
-    const {index, handleCollapsable, hideBox} = this.props;
+    const {index, handleCollapsable, hideBox, sendRequest} = this.props;
     const hideBoxResult = hideBox(index);
     return (
       <div>
@@ -25,7 +27,7 @@ class BoxShare extends Component {
 
           <div className= {`card-share flex-container ${hideBoxResult}`}>
             <div className="box-btn-share">
-              <button className="btn-share" type="submit" onClick={this.props.sendRequest}>
+              <button className="btn-share" type="submit" onClick={sendRequest}>
                 {" "}
                 <i className="far fa-id-card" />
                 <span className="title-edit"> Crear tarjeta </span>
@@ -34,22 +36,10 @@ class BoxShare extends Component {
           </div>
         </div>
 
-        <div className={`edit-share card-created ${this.showShare()} bring-box`}>
-          <div className="card-msg">
-            <p className="msg-text">La tarjeta ha sido creada:</p>
-
-            <p className="share-link" href={this.props.URL}>
-              <span className="link"><a rel="noopener noreferrer" target="_blank" href={this.props.URL}>{this.props.URL}</a></span>
-
-            </p>
-            <button className="btn-twitter">
-              {" "}
-              <i className="fab fa-twitter" />
-              <a className="twitter-link" rel="noopener noreferrer" target="_blank" href={`https://twitter.com/intent/tweet?text=¡Mira%20qué%20tarjeta%20más%20chula%20he%20creado%20con%20Awesome%20profile-cards!%20${this.props.URL}`}>
-                Compartir en twitter
-              </a>
-            </button>
-          </div>
+        <div className={`edit-share card-created ${this.showShare()} 
+        bring-box`}> 
+        <ShareCard URL={this.props.URL} />
+        
         </div>
       </div>
     );
