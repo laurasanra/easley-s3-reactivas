@@ -247,12 +247,8 @@ class App extends Component {
   }
 
   showURL(resultURL){
-   
     if(resultURL.success){
       this.setState({URL:resultURL.cardURL})
-      console.log(this.state.URL)
-    }else{
-    
     }
   };
 
