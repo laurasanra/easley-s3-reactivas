@@ -20,13 +20,13 @@ class CardViewSocial extends Component {
           </li>
           <li className="icons-contein icon-linkedin">
             {" "}
-            <a href={`https://www.linkedin.com/in/${this.props.dataCard.linkedin}`} className="icons-card" target="_blank">
+            <a href={`https://www.linkedin.com/in/${this.props.dataCard.linkedin}`} className="icons-card" rel="noopener noreferrer" target="_blank">
               <i className="fab fa-linkedin-in" />
             </a>
           </li>
           <li className="icons-contein icon-github">
             {" "}
-            <a href={`https://github.com/${this.props.dataCard.github}`}className="icons-card" target="_blank">
+            <a href={`https://github.com/${this.props.dataCard.github}`}className="icons-card" rel="noopener noreferrer" target="_blank">
               <i className="fab fa-github-alt" />
             </a>
           </li>
