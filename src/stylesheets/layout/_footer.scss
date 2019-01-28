@@ -37,13 +37,9 @@
     .container-footer {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         height: 60px;
         align-items: center;
-    }
-    .img-footer {
-        position: absolute;
-        right: 40px;
-        padding-bottom: 0px;
+        padding: 0 40px;
     }
 }
