@@ -11,12 +11,13 @@ class BoxShare extends Component {
 
   render() {
     const {index, handleCollapsable, hideBox} = this.props;
+    const hideBoxResult = hideBox(index);
     return (
       <div>
         <div className="box-selector edit-share">
-          <TittleBox icon="fas fa-share-alt icons-edit" tittle="Comparte" handleCollapsable = {handleCollapsable} index = {index}/>
+          <TittleBox icon="fas fa-share-alt icons-edit" tittle="Comparte" handleCollapsable = {handleCollapsable} index = {index} hideBoxResult={hideBoxResult}/>
 
-          <div className= {`card-share flex-container ${hideBox(index)}`}>
+          <div className= {`card-share flex-container ${hideBoxResult}`}>
             <div className="box-btn-share">
               <button className="btn-share" type="submit" onClick={this.props.sendRequest}>
                 {" "}

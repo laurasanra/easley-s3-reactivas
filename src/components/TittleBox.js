@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 
 class TittleBox extends Component {
-    
+
     render() {
-        const { handleCollapsable, icon, tittle, index } = this.props;
+        const { handleCollapsable, icon, tittle, index} = this.props;
+        
+        const arrow = (this.props.hideBoxResult === "") ? <i className="fas fa-angle-up"></i> : <i className="fas fa-angle-down"></i>;
+
         return (
-            <div className="title-box" onClick={handleCollapsable} index = {index}>
+            <div className="title-box" onClick={handleCollapsable} index={index}>
                 <i className={icon}></i>
                 <span className="title-edit">{tittle}</span>
                 <button
-                    className="btn-angle btn-fold"> <i className="fas fa-angle-up"></i></button>
-                <button className="btn-angle btn-unfold"> <i className="fas fa-angle-down"></i></button>
+                    className="btn-angle">{arrow}</button>
             </div>
 
         )

@@ -41,13 +41,13 @@ class BoxFill extends Component {
   render() {
     const skills = this.props.backSkills;
     const {index, handleCollapsable, hideBox} = this.props;    
-
+    const hideBoxResult = hideBox(index);
 
     return (
       <div className="box-selector edit-fill flex-container">
-        <TittleBox icon="far fa-keyboard icons-edit" tittle="Rellena" handleCollapsable = {handleCollapsable} index = {index}/>
+        <TittleBox icon="far fa-keyboard icons-edit" tittle="Rellena" handleCollapsable = {handleCollapsable} index = {index} hideBoxResult={hideBoxResult}/>
 
-        <form className={`fill bring-box ${hideBox(index)}`}>
+        <form className={`fill bring-box ${hideBoxResult}`}>
           <div className="contact">
             <label htmlFor="firstName">Nombre completo</label>
             <input

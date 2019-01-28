@@ -5,10 +5,11 @@ class BoxDesign extends Component {
 
     render() {
         const {index, handleCollapsable, hideBox} = this.props;
+        const hideBoxResult = hideBox(index);
             return (
             <div className="box-selector edit-design flex-container">
-            <TittleBox icon="far fa-object-ungroup icons-edit" tittle="Diseña" handleCollapsable={handleCollapsable} index={index} />
-            <div className={`container-hide bring-box ${hideBox(index)}`}>
+            <TittleBox icon="far fa-object-ungroup icons-edit" tittle="Diseña" handleCollapsable={handleCollapsable} index={index} hideBoxResult={hideBoxResult}/>
+            <div className={`container-hide bring-box ${hideBoxResult}`}>
             <div className="container-hide bring-box">
                     <div className="selectors-design">
                         <h2 className="text-color">Colores</h2>
