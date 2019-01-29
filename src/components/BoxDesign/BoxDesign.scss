@@ -1,0 +1,224 @@
+@import '../../stylesheets/core/typography';
+@import '../../stylesheets/core/variables';
+
+input {
+    padding-bottom: 6px;
+    padding-left: 9px;
+    padding-top: 4px;
+    border: 1px solid $palette-blue-ligth;
+    outline-style: none;
+    width: 281px;
+}
+
+.box-selector {
+    display: flex;
+    border-bottom: 1px solid $color-midtone;
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+    align-items: center;
+}
+
+@media all and (min-width:768px){
+    .box-selector {
+        width: 329px;
+    }
+}
+
+.edit-share {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.icons-edit {
+    color: $color-primary;
+}
+
+.selectors-design {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+}
+
+.text-color {
+    font-size: 16px;
+    font-family: $font-default;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.list-pallete {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 0px;
+}
+
+.label-color,
+.label-font {
+    display: flex;
+    align-items: center;
+}
+
+.selection-input {
+    height: 17px;
+    width: 17px;
+    cursor: pointer;
+    position: relative;
+}
+
+.fa-gem {
+    color: grey;
+}
+
+.pallet-box {
+    display: flex;
+    margin-left: 10px;
+}
+
+/* blue pallete*/
+
+.blue-dark-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-blue-dark;
+}
+
+.blue-midtone-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-blue-midtone;
+}
+
+.blue-ligth-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-blue-ligth;
+}
+
+/* red pallete*/
+
+.red-dark-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-red-dark;
+}
+
+.red-midtone-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-red-midtone;
+}
+
+.red-ligth-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-red-ligth;
+}
+
+/* grey pallete*/
+
+.grey-dark-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-grey-dark;
+}
+
+.grey-ligth-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-grey-ligth;
+}
+
+.grey-midtone-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-grey-midtone;
+}
+
+/* gum pallete*/
+
+.blue-gum-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-blue-gum;
+    animation: premium 1s infinite;
+}
+
+.pink-midtone-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-pink-dark-gum;
+}
+
+.pink-light-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-pink-light-gum;
+}
+
+/* violet pallete*/
+
+.purple-midtone-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-purple-midtone-color;
+}
+
+.purple-dark-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-purple-dark-color;
+}
+
+.purple-light-color {
+    width: 30px;
+    height: 25px;
+    background-color: $palette-purple-light-color;
+}
+
+.font-box {
+    display: flex;
+    margin-left: 10px;
+    width: 90px;
+}
+
+.selectors-font {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+}
+
+.list-font {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px 0px;
+}
+
+.select-ubuntu {
+    font-family: $ubuntu;
+}
+
+.select-comic {
+    font-family: $comic;
+}
+
+.select-montse {
+    font-family: $montse;
+}
+
+@media all and (min-width:768px) {
+   
+    .selectors-design,
+    .selectors-font {
+        grid-gap: 82px;
+    }
+}

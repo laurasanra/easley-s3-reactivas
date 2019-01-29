@@ -1,0 +1,25 @@
+@import '../../stylesheets/core/typography';
+@import '../../stylesheets/core/variables';
+
+.page {
+    background-color: $color-back; 
+    width: 100%;
+  }
+
+.box-logo-builder {
+    width: 100%;
+    background-color: $color-ligth;
+}
+
+.build-container {
+    background-image: linear-gradient(to bottom, $color-back, $color-ligth);
+}
+
+@media all and (min-width:768px) {
+    .build-container {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 20px 40px 20px 20px;
+        justify-content: center;
+    }
+}

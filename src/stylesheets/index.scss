@@ -1,7 +1,5 @@
 @import 'core/variables';
-@import 'components/typography';
-@import 'pages/card';
-
+@import 'core/typography';
 
 *{  
     box-sizing: border-box;
@@ -19,7 +17,3 @@ body {
     position: relative;
     background-color: $color-ligth;
 }
-
-/*-----------Home /main section landing------------*/ 
-
-@import 'pages/card';

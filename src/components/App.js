@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom';
-import CardGenerator from "./CardGenerator";
-import Home from "./Home";
+import CardGenerator from "./CardGenerator/CardGenerator";
+import Home from "./Home/Home";
 
 const defaultData = {
   pallete: "1",

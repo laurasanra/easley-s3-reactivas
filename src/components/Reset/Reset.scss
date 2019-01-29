@@ -1,0 +1,35 @@
+@import '../../stylesheets/core/typography';
+@import '../../stylesheets/core/variables';
+
+.reset-box {
+    width: 240px;
+    margin: 0 auto;
+    background-color: transparent;
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    i {
+        background-color: transparent;
+        padding-right: 5px;
+    }
+}
+
+.reset-btn {
+    width: 75px;
+    height: 30px;
+    margin: 10px 0 20px;
+    padding: 5px 10px;
+    border: 1px solid $color-ligth;
+    border-radius: 15px;
+    color: $color-secondary;
+    background-color: transparent;
+    font-family: $open;
+    font-size: 12px;
+}
+
+@media all and (min-width:768px) {
+    .reset-box {
+        padding-top: 163px;
+    }
+}

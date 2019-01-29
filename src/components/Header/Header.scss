@@ -1,0 +1,45 @@
+@import '../../stylesheets/core/typography';
+@import '../../stylesheets/core/variables';
+
+.container-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 94px;
+}
+
+.img-logo {
+    max-width: 250px;
+}
+
+.builder-logo {
+    width: 100%;
+    padding: 30px 40px;
+    background-color: $color-ligth;
+}
+
+.img-logo-builder {
+    width: 201px;
+}
+
+@media all and (min-width:768px) {
+    .container-logo {
+        margin-top: 348px;
+    }
+    .img-logo {
+        max-width: 419px;
+    }
+}
+
+@media all and (min-width:1024px) {
+    .builder-logo {
+        width: 1024px;
+        margin: 0 auto;
+    }
+}
+
+@media all and (min-width:1200px) {
+    .container-logo {
+        margin-top: 85px;
+    }
+}
