@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom';
 import CardGenerator from "./CardGenerator/CardGenerator";
 import Home from "./Home/Home";
+import {getSkills} from './services/Skills';
 
 const defaultData = {
   pallete: "1",
@@ -61,11 +62,7 @@ class App extends Component {
   }
 
   getBackSkills() {
-    fetch(
-      "https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json"
-    )
-      .then(response => response.json())
-      .then(data => this.setState({ backSkills: data.skills }));
+    getSkills().then(data => this.setState({ backSkills: data.skills }));
   }
 
   changePallete(e) {
