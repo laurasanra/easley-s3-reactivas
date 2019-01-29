@@ -1,0 +1,16 @@
+{
+  "main.css": "./static/css/main.c2375ec1.chunk.css",
+  "main.js": "./static/js/main.8c760aa5.chunk.js",
+  "main.js.map": "./static/js/main.8c760aa5.chunk.js.map",
+  "static/js/1.1fe083ce.chunk.js": "./static/js/1.1fe083ce.chunk.js",
+  "static/js/1.1fe083ce.chunk.js.map": "./static/js/1.1fe083ce.chunk.js.map",
+  "runtime~main.js": "./static/js/runtime~main.4a686d48.js",
+  "runtime~main.js.map": "./static/js/runtime~main.4a686d48.js.map",
+  "static/media/awesome-card-logo.svg": "./static/media/awesome-card-logo.0118e311.svg",
+  "static/media/CardView.scss": "./static/media/cebra5.1b9fc7b6.png",
+  "static/media/CardViewImg.scss": "./static/media/tiger.6f3190f2.png",
+  "static/css/main.c2375ec1.chunk.css.map": "./static/css/main.c2375ec1.chunk.css.map",
+  "index.html": "./index.html",
+  "precache-manifest.9a273f0ec3f23ae35ae9e0009fcb0c88.js": "./precache-manifest.9a273f0ec3f23ae35ae9e0009fcb0c88.js",
+  "service-worker.js": "./service-worker.js"
+}
