@@ -27,7 +27,7 @@ class CardViewSocial extends Component {
           </li>
           <li className="icons-contein icon-github">
             {" "}
-            <a href={`https://github.com/${this.props.dataCard.github}`}className="icons-card" rel="noopener noreferrer" target="_blank">
+            <a href={`https://github.com/${this.props.dataCard.github}`} className="icons-card" rel="noopener noreferrer" target="_blank">
               <i className="fab fa-github-alt" />
             </a>
           </li>

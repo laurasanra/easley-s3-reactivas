@@ -20,7 +20,7 @@ class TittleBox extends Component {
     }
 }
 
-TittleBox.propTypes = { 
+TittleBox.propTypes = {
     icon: PropTypes.string.isRequired,
     tittle: PropTypes.string.isRequired,
     handleCollapsable: PropTypes.func.isRequired,

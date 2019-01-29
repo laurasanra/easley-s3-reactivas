@@ -3,21 +3,21 @@ import PropTypes from "prop-types";
 import "./Reset.scss";
 
 class Reset extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-      
+
     this.handleReset = this.handleReset.bind(this);
   }
 
-  handleReset(event){
+  handleReset(event) {
     event.preventDefault();
     localStorage.removeItem('storageData');
     this.props.resetInfo();
   }
-  
+
   render() {
-    
-     return (
+
+    return (
       <div className="reset-box">
         <a href="/" onClick={this.handleReset}>
           <div className="reset-btn">

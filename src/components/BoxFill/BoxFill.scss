@@ -1,6 +1,5 @@
 @import '../../stylesheets/core/typography';
 @import '../../stylesheets/core/variables';
-
 input {
     padding-bottom: 6px;
     padding-left: 9px;
@@ -18,7 +17,7 @@ input {
     align-items: center;
 }
 
-@media all and (min-width:768px){
+@media all and (min-width:768px) {
     .box-selector {
         width: 329px;
     }
@@ -102,17 +101,19 @@ input {
     margin-bottom: 11px;
 }
 
-.skillsOptions{
+.skillsOptions {
     list-style: none;
 }
 
-.skill-Box-Check{
+.skill-Box-Check {
     max-width: 27px;
 }
 
 ::placeholder {
     color: $color-pinkish-grey;
-}input {
+}
+
+input {
     padding-bottom: 6px;
     padding-left: 9px;
     padding-top: 4px;

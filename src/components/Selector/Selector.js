@@ -84,7 +84,7 @@ Selector.propTypes = {
   changeImage: PropTypes.func.isRequired,
   changeSkills: PropTypes.func.isRequired,
   sendRequest: PropTypes.func.isRequired,
-  URL: PropTypes.string.isRequired,
-}
+  URL: PropTypes.string.isRequired
+};
 
 export default Selector;

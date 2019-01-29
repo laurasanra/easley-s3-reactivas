@@ -13,9 +13,9 @@ class BoxFill extends Component {
     this.writeImage = this.writeImage.bind(this);
     this.fileInput = React.createRef();
     this.state = {
-      fileName: '',
-      fileUrl: ''
-    }
+      fileName: "",
+      fileUrl: ""
+    };
   }
 
   fakeClick() {
@@ -23,7 +23,6 @@ class BoxFill extends Component {
   }
 
   writeImage() {
-
     const url = fr.result;
     this.props.changeImage(url);
   }
@@ -31,7 +30,7 @@ class BoxFill extends Component {
   handleFileChange(event) {
     const myFile = event.target.files[0];
     const name = myFile.name;
-    fr.addEventListener('load', this.writeImage);
+    fr.addEventListener("load", this.writeImage);
     fr.readAsDataURL(myFile);
 
     this.setState({
@@ -46,7 +45,13 @@ class BoxFill extends Component {
 
     return (
       <div className="box-selector flex-container">
-        <TittleBox icon="far fa-keyboard icons-edit" tittle="Rellena" handleCollapsable={handleCollapsable} index={index} hideBoxResult={hideBoxResult} />
+        <TittleBox
+          icon="far fa-keyboard icons-edit"
+          tittle="Rellena"
+          handleCollapsable={handleCollapsable}
+          index={index}
+          hideBoxResult={hideBoxResult}
+        />
 
         <form className={`fill ${hideBoxResult}`}>
           <div className="contact">
@@ -74,23 +79,29 @@ class BoxFill extends Component {
           <div className="contact">
             <label htmlFor="image">Imagen de perfil</label>
             <div className="add_image">
-              <button className="button_ad_image" type="button" value="submit" onClick={this.fakeClick} >
+              <button
+                className="button_ad_image"
+                type="button"
+                value="submit"
+                onClick={this.fakeClick}
+              >
                 Añadir imagen
               </button>
               <input
-
                 type="file"
                 name="addImage"
                 id="img-selector"
                 className="btn__hidden"
                 ref={this.fileInput}
-                onChange={this.handleFileChange}></input>
+                onChange={this.handleFileChange}
+              />
 
-              <div className="preview-box" style={{
-                backgroundImage: `url(${this.props.dataCard.photo})`
-              }}>
-
-              </div>
+              <div
+                className="preview-box"
+                style={{
+                  backgroundImage: `url(${this.props.dataCard.photo})`
+                }}
+              />
             </div>
           </div>
           <div className="contact">
@@ -144,17 +155,21 @@ class BoxFill extends Component {
                 return (
                   <div className="check_styles" key={index}>
                     <label htmlFor={skill}>
-                      <input className="skill-Box-Check"
+                      <input
+                        className="skill-Box-Check"
                         id={skill}
                         type="checkbox"
                         value={skill}
                         name=""
                         onChange={this.props.changeSkills}
-                        checked={this.props.dataCard.skills.includes(`${skill}`)} />
+                        checked={this.props.dataCard.skills.includes(
+                          `${skill}`
+                        )}
+                      />
                       {skill}
                     </label>
                   </div>
-                )
+                );
               })}
             </ul>
           </section>
@@ -178,6 +193,6 @@ BoxFill.propTypes = {
   changeImage: PropTypes.func.isRequired,
   changeSkills: PropTypes.func.isRequired,
   index: PropTypes.string.isRequired
-}
+};
 
 export default BoxFill;

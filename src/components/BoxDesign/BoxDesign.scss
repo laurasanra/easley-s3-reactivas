@@ -1,6 +1,5 @@
 @import '../../stylesheets/core/typography';
 @import '../../stylesheets/core/variables';
-
 input {
     padding-bottom: 6px;
     padding-left: 9px;
@@ -18,7 +17,7 @@ input {
     align-items: center;
 }
 
-@media all and (min-width:768px){
+@media all and (min-width:768px) {
     .box-selector {
         width: 329px;
     }
@@ -216,7 +215,6 @@ input {
 }
 
 @media all and (min-width:768px) {
-   
     .selectors-design,
     .selectors-font {
         grid-gap: 82px;

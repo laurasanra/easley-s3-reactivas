@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom';
 import CardGenerator from "./CardGenerator/CardGenerator";
 import Home from "./Home/Home";
-import {getSkills} from './services/Skills';
+import { getSkills } from './services/Skills';
 
 const defaultData = {
   pallete: "1",

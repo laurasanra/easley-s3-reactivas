@@ -6,13 +6,13 @@ class CardViewImg extends Component {
     render() {
         const dataCardPhoto = this.props.dataCard.photo;
         const Img = {
-        backgroundImage: `url(${dataCardPhoto})`
+            backgroundImage: `url(${dataCardPhoto})`
         }
-        if(dataCardPhoto === ""){
-            return(<div className="card-img" id="random">
+        if (dataCardPhoto === "") {
+            return (<div className="card-img" id="random">
             </div>)
-            
-        }else{
+
+        } else {
             return (
                 <div className="card-img" id="random" style={Img}>
                 </div>

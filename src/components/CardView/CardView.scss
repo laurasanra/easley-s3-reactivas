@@ -1,6 +1,5 @@
 @import '../../stylesheets/core/typography';
 @import '../../stylesheets/core/variables';
-
 .build-card {
     border: 1px solid $color-silver;
     min-height: 457px;
@@ -11,7 +10,7 @@
     animation: grad cubic-bezier(0.785, 0.135, 0.15, 0.86) 15s infinite;
 }
 
-@media all and (min-width:768px){
+@media all and (min-width:768px) {
     .build-card {
         width: 329px;
         border-radius: 6px;

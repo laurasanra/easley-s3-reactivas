@@ -1,6 +1,5 @@
 @import '../../stylesheets/core/typography';
 @import '../../stylesheets/core/variables';
-
 .box-selector {
     display: flex;
     border-bottom: 1px solid $color-midtone;
@@ -9,7 +8,7 @@
     align-items: center;
 }
 
-@media all and (min-width:768px){
+@media all and (min-width:768px) {
     .box-selector {
         width: 329px;
     }
