@@ -1,0 +1,10 @@
+@import '../../stylesheets/core/typography';
+@import '../../stylesheets/core/variables';
+.card-img {
+    width: 240px;
+    height: 200px;
+    background-color: $palette-blue-ligth;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../images/tiger.png");
+}
