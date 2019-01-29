@@ -1,0 +1,68 @@
+@import '../stylesheets/components/typography';
+@import '../stylesheets/core/variables';
+
+.box-selector {
+    display: flex;
+    border-bottom: 1px solid $color-midtone;
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+    align-items: center;
+}
+
+@media all and (min-width:768px){
+    .box-selector {
+        width: 329px;
+    }
+}
+
+.card-share {
+    display: flex;
+    align-items: center;
+}
+
+.edit-share {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.icons-edit {
+    color: $color-primary;
+}
+
+.card-created {
+    width: 329px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.hide-box {
+    display: none;
+}
+
+.box-btn-share {
+    padding: 33px 0 30px;
+}
+
+.btn-share {
+    background-color: $color-primary;
+    width: 199px;
+    height: 50px;
+    border-radius: 12px;
+    font-size: 18px;
+    color: $color-ligth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+}
+
+.title-box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}

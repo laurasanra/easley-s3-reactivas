@@ -1,0 +1,16 @@
+@import '../stylesheets/components/typography';
+@import '../stylesheets/core/variables';
+
+.page {
+    background-color: $color-back; 
+    width: 100%;
+  }
+
+.box-logo-builder {
+    width: 100%;
+    background-color: $color-ligth;
+}
+
+.build-container {
+    background-image: linear-gradient(to bottom, $color-back, $color-ligth);
+}

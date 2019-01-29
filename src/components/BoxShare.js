@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TittleBox from "./TittleBox";
 import PropTypes from "prop-types";
 import ShareCard from "./ShareCard";
+import "./BoxShare.scss";
 
 class BoxShare extends Component {
 

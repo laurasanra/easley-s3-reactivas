@@ -9,9 +9,19 @@
     align-items: center;
 }
 
+@media all and (min-width:768px){
+    .box-selector {
+        width: 329px;
+    }
+}
+
 .flex-container {
     display: flex;
     flex-direction: column;
+}
+
+.icons-edit {
+    color: $color-primary;
 }
 
 .fill {

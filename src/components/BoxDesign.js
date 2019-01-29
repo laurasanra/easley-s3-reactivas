@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TittleBox from './TittleBox';
 import PropTypes from "prop-types";
+import "./BoxDesign.scss";
 
 class BoxDesign extends Component {
 
@@ -14,7 +15,7 @@ class BoxDesign extends Component {
                     <div className="selectors-design">
                         <h2 className="text-color">Colores</h2>
 
-                        <ul className="colors-list" onChange={this.props.changePalette}>
+                        <ul onChange={this.props.changePalette}>
                             <li className="list-pallete">
                                 <label htmlFor="pallete-blue" className="label-color">
                                     <input id="pallete-blue" type="radio" value="1" name="pallete-colors" onChange={this.props.changePalette}
@@ -79,7 +80,7 @@ class BoxDesign extends Component {
                     <div className="selectors-font">
                         <h2 className="text-color">Fuentes</h2>
 
-                        <ul className="fonts-list">
+                        <ul>
                             <li className="list-font">
                                 <label htmlFor="font-ubuntu" className="label-font">
                                     <input id="font-ubuntu" type="radio" value="1" name="select-font" className="selection-input" onChange={this.props.changeTypography}

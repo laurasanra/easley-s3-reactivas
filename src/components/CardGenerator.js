@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Selector from "./Selector.js";
 import Footer from "../components/Footer";
 import CardView from "./CardView";
+import "./CardGenerator.scss";
 
 class CardGenerator extends Component {
   render() {
